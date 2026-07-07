@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
+import { Section } from "@/components/Section";
+import Accordion from "@/components/Accordion";
+import AboutSection from "@/components/AboutSection";
+import QuoteSection from "@/components/QuoteSection";
+import Testimonials from "@/components/Testimonials";
+import JsonLd from "@/components/JsonLd";
+import { faqs } from "@/data/faqs";
+import { pageMeta } from "@/lib/seo";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+
+export const metadata: Metadata = pageMeta({
+  title: "Pressure Washing FAQs | Pro Pressure Washing",
+  description:
+    "Answers to common pressure washing questions — pricing, eco-friendly chemicals, insurance, commercial and small jobs — from Pro Pressure Washing in Worcester County, MA.",
+  path: "/frequently-asked-questions/",
+});
+
+const crumbs = [
+  { name: "Home", path: "/" },
+  { name: "FAQs", path: "/frequently-asked-questions/" },
+];
+
+export default function FaqPage() {
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={faqSchema()} />
+      <PageHeader
+        title="Frequently Asked Questions"
+        subtitle="Everything you need to know before booking your free quote."
+        crumbs={crumbs}
+      />
+
+      <Section>
+        <div className="mx-auto max-w-3xl">
+          <Accordion items={faqs} />
+        </div>
+      </Section>
+
+      <AboutSection />
+      <QuoteSection />
+      <Testimonials />
+    </>
+  );
+}

@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Pro Pressure Washing — design system (extracted from live site)
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Brand colors */
+  --color-brand-red: #dd3333;
+  --color-brand-red-dark: #c02929;
+  --color-charcoal: #3a3a3a; /* header / top bar */
+  --color-footer: #333333; /* footer background */
+  --color-body: #6b6b6b; /* body copy (darkened from #A5A5A5 for AA contrast) */
+  --color-body-muted: #7d7d7d; /* small labels */
+  --color-footer-text: #b5b5b5; /* footer copy (lightened for contrast on #333) */
+  --color-heading: #464646; /* card / section sub-headings */
+
+  /* Fonts (loaded via next/font in layout.tsx) */
+  --font-sans: var(--font-roboto), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-roboto-slab), Georgia, "Times New Roman", serif;
+}
+
+/* Base element defaults live in @layer base so Tailwind utility classes
+ * (text-white, text-brand-red, …) always win. Without this layer, the bare
+ * `h1{color}` rule would outrank utilities and force every heading dark. */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* Headings default to the slab font + dark heading color, but any
+   * text-color utility on the element overrides this. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  /* Section heading: centered red H2/H3 pattern from the live site */
+  .section-title {
+    color: var(--color-brand-red);
+    font-size: clamp(1.75rem, 4vw, 2rem);
+    text-align: center;
+  }
+
+  /* Squared-off brand button */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-brand-red);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.8125rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 2px;
+    transition: background-color 0.15s ease;
+    border: 2px solid var(--color-brand-red);
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: var(--color-brand-red-dark);
+    border-color: var(--color-brand-red-dark);
+  }
+  .btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  .btn-outline:hover {
+    background: #ffffff;
+    color: var(--color-charcoal);
+  }
+
+  /* Standard prose links inside body copy */
+  .prose-copy a {
+    color: var(--color-brand-red);
+    text-decoration: underline;
+  }
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--color-brand-red);
+  outline-offset: 2px;
+}
