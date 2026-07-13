@@ -24,6 +24,12 @@ export const business = {
   hoursText: "Open Monday–Sunday",
   reviewsUrl:
     "https://search.google.com/local/reviews?placeid=ChIJE6yQ6Nv_44kRSP9Yvgw3rEY",
+  // Google Business Profile rating (keep in sync with the live listing).
+  rating: 4.9,
+  reviewCount: 64,
+  // Google Business Profile map embed (from the "Share > Embed a map" iframe).
+  mapEmbedSrc:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.178920276984!2d-71.8698308!3d42.338708600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3ffdbe890ac13%3A0x46ac370cbe58ff48!2sPro%20Pressure%20Washing!5e0!3m2!1sen!2sus!4v1783969118477!5m2!1sen!2sus",
   // Canonical production domain (used for metadata, sitemap, canonicals, schema).
   siteUrl: "https://clpropressurewashing.com",
   serviceAreas: [

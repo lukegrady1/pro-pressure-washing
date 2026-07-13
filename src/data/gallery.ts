@@ -35,3 +35,14 @@ export const galleryPairs: GalleryPair[] = [
   { before: `${U}/before-power-washing-walkway.jpg`, after: `${U}/after-power-washing-walkway.jpg`, label: "walkway power washing" },
   { before: `${U}/Before-power-washing-siding-1.jpg`, after: `${U}/AFTER-power-washing-siding-1.jpg`, label: "siding power washing" },
 ];
+
+// Hand-picked pairs (genuine matching-frame shots) for the interactive
+// before/after comparison sliders on the homepage and elsewhere.
+export const featuredPairs: GalleryPair[] = [
+  { before: `${U}/BEFORE-House-washing.jpg`, after: `${U}/AFTER-House-Washing.jpg`, label: "House Washing in Worcester County, MA" },
+  { before: `${U}/before-deck-power-washing-in-Holden-NEW.jpg`, after: `${U}/pressure-wash-deck-Holden-NEW.jpg`, label: "Deck Power Washing in Holden, MA" },
+  { before: `${U}/before-patio-pressure-washing-for-moss-removal-in-Worceester.jpg`, after: `${U}/patio-pressure-washing-for-moss-removal-in-Worcester.jpg`, label: "Patio Moss Removal in Worcester, MA" },
+  { before: `${U}/before-power-washing-concrete-stairs-in-Worcester.jpg`, after: `${U}/power-washing-concrete-stairs-in-Worcester.jpg`, label: "Concrete Stairs Power Washing in Worcester, MA" },
+  { before: `${U}/before-power-washing-walkway.jpg`, after: `${U}/after-power-washing-walkway.jpg`, label: "Walkway Power Washing" },
+  { before: `${U}/BEFORE-power-washing-house-Leicester-MA.jpg`, after: `${U}/After-power-washing-house-Leicester-MA-2.jpg`, label: "House Power Washing in Leicester, MA" },
+];

@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
-import { Section } from "@/components/Section";
-import { ServicesGrid } from "@/components/ServiceCard";
+import { Section, SectionHeading } from "@/components/Section";
+import { ServiceCard } from "@/components/ServiceCard";
 import AboutSection from "@/components/AboutSection";
 import QuoteSection from "@/components/QuoteSection";
 import CtaStrip from "@/components/CtaStrip";
 import Testimonials from "@/components/Testimonials";
 import JsonLd from "@/components/JsonLd";
+import { ArrowRightIcon } from "@/components/Icons";
+import { residentialServices, commercialServices } from "@/data/services";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Pressure Washing Services | Worcester County MA | Pro Pressure Washing",
+  title: "Pressure Washing Services | Worcester County MA",
   description:
-    "Explore our pressure & soft washing services in Worcester County, MA: houses, buildings & roofs, patios & walkways, fences & decks. Free, honest quotes.",
+    "Residential & commercial pressure washing services across Worcester County, MA — house & soft washing, roofs, decks, concrete, storefronts & more. Call (508) 736-0089.",
   path: "/services/",
 });
 
@@ -27,13 +30,47 @@ export default function ServicesPage() {
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
-        title="Services"
-        subtitle="Enhance the look of your property with our services."
+        title="Our Pressure Washing Services"
+        subtitle="Residential and commercial exterior cleaning across Worcester County, MA."
         crumbs={crumbs}
       />
 
       <Section>
-        <ServicesGrid />
+        <SectionHeading
+          title="Residential Services"
+          intro="Safe, effective cleaning for every part of your home's exterior."
+        />
+        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          {residentialServices.map((s) => (
+            <ServiceCard key={s.slug} service={s} />
+          ))}
+        </div>
+      </Section>
+
+      <Section className="bg-neutral-50">
+        <SectionHeading
+          title="Commercial Services"
+          intro="Keep your business, building or community property looking its best — fully insured, on your schedule."
+        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {commercialServices.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/${s.slug}/`}
+              className="group flex flex-col justify-between gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+            >
+              <div>
+                <h3 className="text-lg text-heading group-hover:text-brand-red">
+                  {s.navLabel}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed">{s.excerpt}</p>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-brand-red">
+                Learn More <ArrowRightIcon width={16} height={16} />
+              </span>
+            </Link>
+          ))}
+        </div>
       </Section>
 
       <AboutSection />

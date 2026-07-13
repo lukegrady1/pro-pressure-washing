@@ -40,7 +40,7 @@ export default function Gallery({ pairs }: { pairs: GalleryPair[] }) {
             key={shot.src + i}
             type="button"
             onClick={() => setActive(i)}
-            className="group relative aspect-square overflow-hidden rounded-md bg-neutral-100"
+            className="group relative aspect-square overflow-hidden rounded-xl bg-neutral-100 shadow-card ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-card-hover"
             aria-label={`Open image: ${shot.alt}`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}

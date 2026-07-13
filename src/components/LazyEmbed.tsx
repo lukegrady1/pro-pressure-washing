@@ -45,17 +45,29 @@ export function LazyYouTube({
   );
 }
 
-// Click-to-load Google Map facade.
-export function LazyMap({ query }: { query: string }) {
-  const [load, setLoad] = useState(false);
-  const src = `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+// Click-to-load Google Map facade. Pass `embedSrc` for a specific Google
+// Business Profile embed, otherwise falls back to a query-based map.
+export function LazyMap({
+  query,
+  embedSrc,
+}: {
+  query: string;
+  embedSrc?: string;
+}) {
+  // A specific Business Profile embed loads immediately; the generic query
+  // map keeps its click-to-load facade for performance.
+  const [load, setLoad] = useState(Boolean(embedSrc));
+  const src =
+    embedSrc ??
+    `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
   return (
-    <div className="relative aspect-[16/7] w-full overflow-hidden rounded-md bg-neutral-200">
+    <div className="relative aspect-[16/7] w-full overflow-hidden rounded-2xl bg-neutral-200 shadow-card ring-1 ring-black/5">
       {load ? (
         <iframe
           src={src}
           title={`Map of ${query}`}
           loading="lazy"
+          allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
           className="absolute inset-0 h-full w-full border-0"
         />

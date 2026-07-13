@@ -1,22 +1,33 @@
+import { residentialServices, commercialServices } from "@/data/services";
+
 export type NavLink = { label: string; href: string };
 
-export const services: NavLink[] = [
-  { label: "Houses, Buildings and Roofs", href: "/services/houses-buildings-roofs/" },
-  { label: "Patios and Walkways", href: "/services/patios-and-walkways/" },
-  { label: "Fences and Decks", href: "/services/fences-and-decks/" },
-];
+// Header dropdown + footer service list, derived from the service content.
+export const residentialServiceNav: NavLink[] = residentialServices.map((s) => ({
+  label: s.navLabel,
+  href: `/${s.slug}/`,
+}));
+
+export const commercialServiceNav: NavLink[] = commercialServices.map((s) => ({
+  label: s.navLabel,
+  href: `/${s.slug}/`,
+}));
 
 export const primaryNav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services/" },
-  { label: "Our Work", href: "/gallery/our-work-2/" },
+  { label: "Service Areas", href: "/service-areas/" },
+  { label: "Our Work", href: "/gallery/" },
   { label: "Contact Us", href: "/contact-us/" },
 ];
 
 export const footerNav: NavLink[] = [
-  { label: "Our Work", href: "/gallery/our-work-2/" },
-  { label: "FAQs", href: "/frequently-asked-questions/" },
+  { label: "Services", href: "/services/" },
+  { label: "Service Areas", href: "/service-areas/" },
+  { label: "Our Work", href: "/gallery/" },
+  { label: "Reviews", href: "/reviews/" },
+  { label: "FAQs", href: "/faq/" },
+  { label: "About Us", href: "/about/" },
   { label: "Contact Us", href: "/contact-us/" },
   { label: "Privacy Policy", href: "/privacy-policy/" },
-  { label: "Terms of Service", href: "/terms-of-service/" },
 ];

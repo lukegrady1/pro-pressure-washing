@@ -18,8 +18,14 @@ export default function Testimonials({
     <div className="bg-neutral-100 py-16">
       <div className="mx-auto w-full max-w-3xl px-5 sm:px-6">
         <SectionHeading title="Client Testimonials" />
-        <figure className="text-center">
-          <blockquote className="text-lg italic leading-relaxed text-heading">
+        <figure className="relative rounded-2xl bg-white px-7 py-9 text-center shadow-card sm:px-12 sm:py-11">
+          <span
+            aria-hidden
+            className="pointer-events-none absolute left-5 top-2 select-none font-[family-name:var(--font-heading)] text-7xl leading-none text-brand-red/15 sm:left-8 sm:text-8xl"
+          >
+            &ldquo;
+          </span>
+          <blockquote className="relative text-lg italic leading-relaxed text-heading">
             “{current.quote}”
           </blockquote>
           <figcaption className="mt-5 font-bold text-brand-red">

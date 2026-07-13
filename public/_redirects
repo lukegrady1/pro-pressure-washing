@@ -1,0 +1,16 @@
+# 301 redirects (Netlify) — preserve SEO equity after the URL restructure.
+# See SITE-SPEC.md §9.2. Vercel uses vercel.json for the same rules.
+
+# Service pages → new keyword slugs
+/services/houses-buildings-roofs/    /house-washing-worcester-ma/            301
+/services/patios-and-walkways/       /driveway-patio-cleaning-worcester-ma/  301
+/services/fences-and-decks/          /deck-fence-cleaning-worcester-ma/      301
+
+# Core pages
+/gallery/our-work-2/                 /gallery/                               301
+/frequently-asked-questions/         /faq/                                   301
+
+# Town pages: legacy power-washing → pressure-washing
+/power-washing-shrewsbury-ma/        /pressure-washing-shrewsbury-ma/        301
+/power-washing-northborough-ma/      /pressure-washing-northborough-ma/      301
+/power-washing-westborough-ma/       /pressure-washing-westborough-ma/       301

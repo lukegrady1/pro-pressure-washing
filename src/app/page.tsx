@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { business } from "@/data/business";
 import { proServicesIntro } from "@/data/content";
-import HeroSlider, { type Slide } from "@/components/HeroSlider";
+import Hero from "@/components/Hero";
 import { Section, SectionHeading } from "@/components/Section";
 import { ServicesGrid } from "@/components/ServiceCard";
 import CtaStrip from "@/components/CtaStrip";
@@ -10,57 +10,25 @@ import AboutSection from "@/components/AboutSection";
 import QuoteSection from "@/components/QuoteSection";
 import WhyChoose from "@/components/WhyChoose";
 import Testimonials from "@/components/Testimonials";
+import FaqWidget from "@/components/FaqWidget";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import { LazyMap } from "@/components/LazyEmbed";
+import JsonLd from "@/components/JsonLd";
+import { featuredPairs } from "@/data/gallery";
 import { pageMeta } from "@/lib/seo";
+import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Pressure Washing Worcester County MA | Pro Pressure Washing",
+  title: "Pro Pressure Washing Service Holden Worcester Shrewsbury MA",
   description:
-    "Top-rated, family-owned pressure & soft washing in Worcester County, MA. House, roof, deck, fence, patio & concrete cleaning with eco-friendly solutions. Free quotes.",
+    "Pro Pressure Washing: pressure washing service, gutter cleaning service, exterior house washing, driveway pressure washing in Holden, Worcester & Shrewsbury, MA.",
   path: "/",
 });
-
-const slides: Slide[] = [
-  {
-    kicker: "Top Rated Service",
-    heading: "Pressure Washing in Worcester County, MA — One Call Cleans It All",
-    ctaLabel: "Get in Touch",
-    ctaHref: "/contact-us/",
-    image:
-      "/images/2021/03/Pressure-Washing-Service-House-Washing-Worcester-County-MA-960x320.jpeg",
-    alt: "House washing pressure washing service in Worcester County MA — Pro Pressure Washing",
-  },
-  {
-    kicker: "We Take Care of It All",
-    heading: "We provide pressure washing services to a wide range of clients",
-    ctaLabel: "View Our Services",
-    ctaHref: "/services/",
-    image: "/images/2021/03/Fence-Pressure-Washing-Service-960x320.png",
-    alt: "Fence pressure washing service — Pro Pressure Washing",
-  },
-  {
-    kicker: "View Our Work",
-    heading: "We take care of the toughest stains",
-    ctaLabel: "View Our Gallery",
-    ctaHref: "/gallery/our-work-2/",
-    image: "/images/2021/03/Vinyl-Siding-Pressure-Washing-Service-960x320.png",
-    alt: "Vinyl siding pressure washing service — Pro Pressure Washing",
-  },
-  {
-    kicker: "Five Star Service",
-    heading: "One Call Cleans It All!",
-    ctaLabel: "Read Our Reviews",
-    ctaHref: business.reviewsUrl,
-    external: true,
-    image: "/images/2021/03/House-Washing-Pressure-Washing-Service-960x320.png",
-    alt: "House washing pressure washing service — Pro Pressure Washing",
-  },
-];
 
 export default function HomePage() {
   return (
     <>
-      <HeroSlider slides={slides} />
+      <Hero />
 
       {/* Pro Services We Offer */}
       <Section>
@@ -75,8 +43,22 @@ export default function HomePage() {
 
       <CtaStrip
         text="See what we can do for your property!"
-        buttons={[{ label: "View Our Work", href: "/gallery/our-work-2/" }]}
+        buttons={[{ label: "View Our Work", href: "/gallery/" }]}
       />
+
+      {/* Interactive before/after sliders */}
+      <Section>
+        <SectionHeading
+          title="See the Difference — Before & After"
+          intro="Drag the slider on each photo to reveal the transformation. Real pressure washing results from jobs across Worcester County, MA."
+        />
+        <BeforeAfterShowcase pairs={featuredPairs} />
+        <div className="mt-10 text-center">
+          <Link href="/gallery/" className="btn">
+            View Full Gallery
+          </Link>
+        </div>
+      </Section>
 
       <AboutSection />
 
@@ -96,13 +78,23 @@ export default function HomePage() {
 
       <Testimonials />
 
+      {/* FAQs — embedded widget + FAQPage schema for Google & AI crawlers */}
+      <Section className="bg-neutral-50">
+        <JsonLd data={faqSchema()} />
+        <SectionHeading
+          title="Frequently Asked Questions"
+          intro="Common questions about our pressure washing, gutter cleaning and exterior washing services in Holden, Worcester & Shrewsbury, MA."
+        />
+        <FaqWidget />
+      </Section>
+
       {/* Map + closing */}
       <Section>
         <SectionHeading
           title="Serving All of Worcester County"
           intro="Give us a call if you have a project in mind. We would love to get your property in shape for summer!"
         />
-        <LazyMap query="Worcester County, MA" />
+        <LazyMap query="Pro Pressure Washing" embedSrc={business.mapEmbedSrc} />
       </Section>
     </>
   );

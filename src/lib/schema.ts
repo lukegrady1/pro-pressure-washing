@@ -76,17 +76,22 @@ export function serviceSchema(opts: {
   };
 }
 
-// FAQPage schema built from the shared FAQ data.
-export function faqSchema() {
+// FAQPage schema from an arbitrary list of {q, a} (service/town pages).
+export function faqSchemaFrom(list: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
+    mainEntity: list.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+}
+
+// FAQPage schema built from the shared FAQ data.
+export function faqSchema() {
+  return faqSchemaFrom(faqs);
 }
 
 // BreadcrumbList for interior pages.

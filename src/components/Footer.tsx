@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { business } from "@/data/business";
-import { footerNav, services } from "@/data/nav";
+import { footerNav, residentialServiceNav } from "@/data/nav";
 import { towns } from "@/data/towns";
 
 export default function Footer() {
@@ -51,7 +51,7 @@ export default function Footer() {
             Our Services
           </h2>
           <ul className="space-y-2 text-sm">
-            {services.map((s) => (
+            {residentialServiceNav.map((s) => (
               <li key={s.href}>
                 <Link href={s.href} className="hover:text-brand-red">
                   {s.label}

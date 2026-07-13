@@ -17,6 +17,11 @@
   /* Fonts (loaded via next/font in layout.tsx) */
   --font-sans: var(--font-roboto), Arial, Helvetica, sans-serif;
   --font-heading: var(--font-roboto-slab), Georgia, "Times New Roman", serif;
+
+  /* Elevation scale — soft, layered shadows for the modern card system */
+  --shadow-card: 0 2px 4px rgba(17, 17, 17, 0.04), 0 6px 16px rgba(17, 17, 17, 0.06);
+  --shadow-card-hover: 0 8px 16px rgba(17, 17, 17, 0.08),
+    0 24px 48px -12px rgba(17, 17, 17, 0.22);
 }
 
 /* Base element defaults live in @layer base so Tailwind utility classes
@@ -51,11 +56,25 @@
 }
 
 @layer components {
-  /* Section heading: centered red H2/H3 pattern from the live site */
+  /* Section heading: centered red H2/H3 pattern from the live site, with a
+   * short brand-red accent bar beneath (modern editorial touch). */
   .section-title {
+    position: relative;
+    padding-bottom: 0.85rem;
     color: var(--color-brand-red);
     font-size: clamp(1.75rem, 4vw, 2rem);
     text-align: center;
+  }
+  .section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--color-brand-red);
   }
 
   /* Squared-off brand button */
@@ -73,13 +92,20 @@
     font-size: 0.8125rem;
     padding: 0.85rem 1.6rem;
     border-radius: 2px;
-    transition: background-color 0.15s ease;
+    box-shadow: 0 1px 2px rgba(17, 17, 17, 0.12);
+    transition: background-color 0.15s ease, transform 0.15s ease,
+      box-shadow 0.15s ease;
     border: 2px solid var(--color-brand-red);
     cursor: pointer;
   }
   .btn:hover {
     background: var(--color-brand-red-dark);
     border-color: var(--color-brand-red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -4px rgba(221, 51, 51, 0.4);
+  }
+  .btn:active {
+    transform: translateY(0);
   }
   .btn-outline {
     background: transparent;
@@ -102,4 +128,59 @@
 :focus-visible {
   outline: 3px solid var(--color-brand-red);
   outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Hero motion — entrance is applied only to *supporting* elements so the
+ * LCP headline paints instantly. Everything is gated behind
+ * prefers-reduced-motion, so reduced-motion users see the final state.
+ * ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    opacity: 0;
+    animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-zoom {
+    animation: heroZoom 9s ease-out forwards;
+    transform-origin: center;
+    will-change: transform;
+  }
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Before/after knob — a gentle idle ring pulse hints that it's draggable. */
+@media (prefers-reduced-motion: no-preference) {
+  .ba-knob {
+    animation: baPulse 2.6s ease-in-out infinite;
+  }
+}
+@keyframes baPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(221, 51, 51, 0.45),
+      0 4px 10px rgba(17, 17, 17, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(221, 51, 51, 0),
+      0 4px 10px rgba(17, 17, 17, 0.25);
+  }
 }

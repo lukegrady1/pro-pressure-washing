@@ -9,15 +9,15 @@ import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Before & After Photos | Pressure Washing Worcester County MA",
+  title: "Before & After Gallery | Pro Pressure Washing",
   description:
-    "See real before & after results from Pro Pressure Washing — house washing, decks, patios, siding, concrete, moss, rust and graffiti removal across Worcester County, MA.",
-  path: "/gallery/our-work-2/",
+    "Real before & after power washing results across Worcester County, MA — house washing, decks, patios, siding, concrete, moss, rust & graffiti removal. Free quote: (508) 736-0089.",
+  path: "/gallery/",
 });
 
 const crumbs = [
   { name: "Home", path: "/" },
-  { name: "Our Work", path: "/gallery/our-work-2/" },
+  { name: "Gallery", path: "/gallery/" },
 ];
 
 export default function GalleryPage() {
@@ -25,7 +25,7 @@ export default function GalleryPage() {
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
-        title="Our Work"
+        title="Before & After Gallery"
         subtitle="A selection of our best work — before &amp; after."
         crumbs={crumbs}
       />

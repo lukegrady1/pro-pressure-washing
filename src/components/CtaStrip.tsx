@@ -12,7 +12,7 @@ export default function CtaStrip({
   buttons: CtaButton[];
 }) {
   return (
-    <div className="bg-brand-red py-10">
+    <div className="bg-gradient-to-br from-brand-red to-brand-red-dark py-12">
       <Container className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
         <p className="max-w-2xl text-xl font-bold text-white sm:text-2xl [font-family:var(--font-heading)]">
           {text}

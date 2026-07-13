@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { business } from "@/data/business";
-import { servicesList } from "@/data/services";
+import { allServices } from "@/data/services";
 import { towns } from "@/data/towns";
 
 export const dynamic = "force-static";
@@ -9,14 +9,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = business.siteUrl;
   const staticPaths = [
     "/",
+    "/about/",
     "/services/",
-    "/gallery/our-work-2/",
+    "/service-areas/",
+    "/gallery/",
+    "/reviews/",
+    "/faq/",
     "/contact-us/",
-    "/frequently-asked-questions/",
     "/privacy-policy/",
     "/terms-of-service/",
   ];
-  const servicePaths = servicesList.map((s) => s.href);
+  const servicePaths = allServices.map((s) => `/${s.slug}/`);
   const townPaths = towns.map((t) => `/${t.slug}/`);
 
   return [...staticPaths, ...servicePaths, ...townPaths].map((path) => ({

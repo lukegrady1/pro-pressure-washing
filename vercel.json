@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/services/houses-buildings-roofs", "destination": "/house-washing-worcester-ma/", "permanent": true },
+    { "source": "/services/patios-and-walkways", "destination": "/driveway-patio-cleaning-worcester-ma/", "permanent": true },
+    { "source": "/services/fences-and-decks", "destination": "/deck-fence-cleaning-worcester-ma/", "permanent": true },
+    { "source": "/gallery/our-work-2", "destination": "/gallery/", "permanent": true },
+    { "source": "/frequently-asked-questions", "destination": "/faq/", "permanent": true },
+    { "source": "/power-washing-shrewsbury-ma", "destination": "/pressure-washing-shrewsbury-ma/", "permanent": true },
+    { "source": "/power-washing-northborough-ma", "destination": "/pressure-washing-northborough-ma/", "permanent": true },
+    { "source": "/power-washing-westborough-ma", "destination": "/pressure-washing-westborough-ma/", "permanent": true }
+  ]
+}

@@ -75,7 +75,7 @@ export default function ContactPage() {
       </Section>
 
       <Section className="pt-0">
-        <LazyMap query="Worcester County, MA" />
+        <LazyMap query="Pro Pressure Washing" embedSrc={business.mapEmbedSrc} />
       </Section>
 
       <Testimonials />

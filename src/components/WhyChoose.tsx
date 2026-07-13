@@ -10,8 +10,8 @@ export default function WhyChoose() {
         {whyChoose.map((item) => {
           const Icon = iconMap[item.icon as keyof typeof iconMap];
           return (
-            <div key={item.title} className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-red/10 text-brand-red">
+            <div key={item.title} className="group flex gap-4">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-red/10 text-brand-red ring-1 ring-brand-red/10 transition-colors duration-300 group-hover:bg-brand-red group-hover:text-white">
                 <Icon width={24} height={24} />
               </div>
               <div>
