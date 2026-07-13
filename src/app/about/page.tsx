@@ -13,7 +13,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "About Us | Family-Owned Power Washing, Holden MA",
   description:
-    "Pro Pressure Washing is a family-owned, fully insured power washing company in Holden, MA serving all of Worcester County. Honest pricing. Call (508) 736-0089.",
+    "Family-owned, fully insured power washing in Holden, MA, serving all of Worcester County. Honest pricing, free quotes. Call (508) 736-0089.",
   path: "/about/",
 });
 

@@ -11,7 +11,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "Before & After Gallery | Pro Pressure Washing",
   description:
-    "Real before & after power washing results across Worcester County, MA — house washing, decks, patios, siding, concrete, moss, rust & graffiti removal. Free quote: (508) 736-0089.",
+    "Real before & after power washing results across Worcester County, MA — houses, decks, patios, concrete, moss & graffiti. Free quote: (508) 736-0089.",
   path: "/gallery/",
 });
 

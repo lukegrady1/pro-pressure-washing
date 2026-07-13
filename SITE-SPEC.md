@@ -40,6 +40,31 @@
 - Image filenames + alt: `[service]-[town]-ma-[before|after].jpg` with descriptive alt.
 - Internal links: every town page ↔ every core service page; blog posts → relevant service + town pages; vary anchor text.
 - Mark copy needing real client input with `TODO(client):` (photos, exact prices, job stories).
+- **Hit the on-page targets in §5.1 below**, and run the automated SEO check (`npm run seo-check`) — it flags any page with out-of-range titles, metas, H1s or keyword counts. Fix flags before shipping.
+
+## On-page targets (Section 5.1)
+
+Concrete length/frequency targets keep copy disciplined and prevent the competitor's over-stuffing. **Keep keyword density ~0.5–1.5%** and let natural variants carry the rest — do **not** copy Kings of Pressure's stuffing pattern (Google increasingly discounts it).
+
+**Word count & keyword frequency per page type:**
+
+| Page type | Words | Primary keyword uses |
+|---|---|---|
+| Homepage | 600–900 | 4–6× |
+| Service pages | 600–1,000 | 5–8× |
+| Town pages | 500–800 | full phrase 3–5×; town name 8–12× |
+| Blog posts | 1,200–1,800 | 4–6× |
+| About / Contact | 300–500 | 1–2× |
+
+**Character limits per element:**
+
+| Element | Limit | Keyword placement |
+|---|---|---|
+| Title tag | 50–60 chars | keyword first |
+| Meta description | 140–155 chars | include keyword + phone/CTA |
+| H1 | 20–70 chars | contains keyword |
+| URL slug | 3–6 words | keyword-based |
+| Image alt | ≤125 chars | descriptive, keyword where natural |
 
 ## Pages to build (Section 4)
 

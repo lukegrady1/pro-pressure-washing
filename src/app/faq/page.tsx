@@ -12,7 +12,7 @@ import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "Pressure Washing FAQs | Pro Pressure Washing",
   description:
-    "Answers to common pressure washing questions — pricing, eco-friendly chemicals, insurance, commercial & small jobs — in Worcester County, MA. Call (508) 736-0089.",
+    "Answers to common pressure washing questions — pricing, eco-friendly chemicals, insurance & more — in Worcester County, MA. Call (508) 736-0089.",
   path: "/faq/",
 });
 

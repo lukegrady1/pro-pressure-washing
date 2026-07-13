@@ -14,7 +14,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "Service Areas | Power Washing in Worcester County",
   description:
-    "Pro Pressure Washing serves Holden, Worcester, Paxton, Shrewsbury & all of Worcester County, MA. Find your town for local power washing. Call (508) 736-0089.",
+    "Pro Pressure Washing serves Holden, Worcester, Shrewsbury & all of Worcester County, MA. Find your town for local power washing. Call (508) 736-0089.",
   path: "/service-areas/",
 });
 

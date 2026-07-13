@@ -60,7 +60,7 @@ export const towns: Town[] = [
     keyword: "pressure washing Worcester MA",
     title: "Pressure Washing Worcester MA | Pro Pressure Washing",
     metaDescription:
-      "Pressure washing in Worcester, MA. Soft washing for homes, triple-deckers & multifamilies plus concrete cleaning. Insured, local. Free quote: (508) 736-0089.",
+      "Pressure washing in Worcester, MA. Soft washing for homes, triple-deckers & multifamilies. Insured, local. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in Worcester, MA",
     distanceFromHolden:
       "Worcester is about 15 minutes south of our Holden base, so we cover the whole city easily and respond fast.",
@@ -93,7 +93,7 @@ export const towns: Town[] = [
     keyword: "pressure washing Paxton MA",
     title: "Pressure Washing Paxton MA | Pro Pressure Washing",
     metaDescription:
-      "Pressure washing in Paxton, MA. House soft washing, roof, deck & concrete cleaning for wooded rural properties. Local & insured. Free quote: (508) 736-0089.",
+      "Pressure washing in Paxton, MA. House soft washing, roof, deck & concrete cleaning for rural properties. Insured. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in Paxton, MA",
     distanceFromHolden:
       "Paxton borders Holden to the west — we're about 10 minutes away and treat it like our own backyard.",
@@ -159,7 +159,7 @@ export const towns: Town[] = [
     keyword: "pressure washing Sterling MA",
     title: "Pressure Washing Sterling MA | Pro Pressure Washing",
     metaDescription:
-      "Pressure washing in Sterling, MA. House soft washing, roof, deck & concrete cleaning for homes & farm properties. Local, insured. Free quote: (508) 736-0089.",
+      "Pressure washing in Sterling, MA. House soft washing, roof, deck & concrete cleaning for homes & farms. Insured. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in Sterling, MA",
     distanceFromHolden:
       "Sterling is about 15 minutes north of Holden, and we're out that way often.",
@@ -225,7 +225,7 @@ export const towns: Town[] = [
     keyword: "pressure washing West Boylston MA",
     title: "Pressure Washing West Boylston MA | Pro",
     metaDescription:
-      "Pressure washing in West Boylston, MA. House soft washing, roof, deck & concrete cleaning near the Wachusett Reservoir. Insured. Free quote: (508) 736-0089.",
+      "Pressure washing in West Boylston, MA. Soft washing, roof, deck & concrete cleaning near the Wachusett Reservoir. Insured. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in West Boylston, MA",
     distanceFromHolden:
       "West Boylston borders Holden to the east — we're about 10 minutes away.",
@@ -393,7 +393,7 @@ export const towns: Town[] = [
     keyword: "pressure washing Southborough MA",
     title: "Pressure Washing Southborough MA | Pro Pressure Washing",
     metaDescription:
-      "Pressure washing in Southborough, MA. Soft washing for estate homes plus roof, deck & concrete cleaning. Insured, careful, local. Free quote: (508) 736-0089.",
+      "Pressure washing in Southborough, MA. Soft washing for estate homes plus roof, deck & concrete cleaning. Insured & careful. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in Southborough, MA",
     distanceFromHolden:
       "Southborough is about 30 minutes southeast of Holden and part of our service area.",

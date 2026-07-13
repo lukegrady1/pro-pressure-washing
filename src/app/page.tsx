@@ -21,7 +21,7 @@ import { faqSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "Pro Pressure Washing Service Holden Worcester Shrewsbury MA",
   description:
-    "Pro Pressure Washing: pressure washing service, gutter cleaning service, exterior house washing, driveway pressure washing in Holden, Worcester & Shrewsbury, MA.",
+    "Pro Pressure Washing: house washing, roof, gutter, deck & concrete cleaning in Holden, Worcester & Worcester County, MA. Free quote: (508) 736-0089.",
   path: "/",
 });
 

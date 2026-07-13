@@ -16,7 +16,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = pageMeta({
   title: "Pressure Washing Services | Worcester County MA",
   description:
-    "Residential & commercial pressure washing services across Worcester County, MA — house & soft washing, roofs, decks, concrete, storefronts & more. Call (508) 736-0089.",
+    "Residential and commercial pressure washing across Worcester County, MA — houses, roofs, decks, concrete, storefronts and more. Call (508) 736-0089.",
   path: "/services/",
 });
 
