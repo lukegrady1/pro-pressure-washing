@@ -371,10 +371,17 @@ export const residentialServices: ServicePage[] = [
           "Those black vertical streaks aren't dirt you can rinse off — they're oxidation and pollution bonded to the aluminum. Our gutter-brightening solution dissolves them so the gutter face matches the clean trim again. It's the difference between gutters that look dirty and gutters that look new.",
         ],
       },
+      {
+        h2: "Gutter guards to stay clean longer",
+        body: [
+          "Tired of cleaning gutters twice a year? We can install gutter guards that keep leaves, needles and debris out while letting water flow through — a smart upgrade for the pine- and oak-heavy properties common across Worcester County. Ask us whether guards make sense for your home when we come out for a quote.",
+        ],
+      },
     ],
     benefits: [
       "Prevents overflow, fascia rot and basement flooding",
       "Removes black 'tiger stripe' oxidation stains",
+      "Gutter guard installation available to cut future cleanings",
       "Pairs perfectly with a house wash or roof cleaning",
       "Debris bagged and hauled away",
     ],
@@ -398,8 +405,77 @@ export const residentialServices: ServicePage[] = [
         q: "Can you remove the black streaks on my gutters?",
         a: "Yes. Those streaks are oxidation bonded to the aluminum, not loose dirt. Our brightening treatment dissolves them and restores the original finish.",
       },
+      {
+        q: "Do you install gutter guards?",
+        a: "Yes. If you're tired of clearing gutters every season, we can install gutter guards that block leaves and needles while letting water through. We'll tell you honestly whether they make sense for your roof and tree cover. TODO(client): confirm gutter-guard products and pricing.",
+      },
     ],
-    related: ["house-washing-worcester-ma", "roof-cleaning-worcester-ma", "soft-washing-worcester-ma"],
+    related: ["house-washing-worcester-ma", "roof-cleaning-worcester-ma", "window-cleaning-worcester-ma"],
+  },
+  {
+    slug: "window-cleaning-worcester-ma",
+    category: "residential",
+    navLabel: "Window Cleaning",
+    keyword: "window cleaning Worcester MA",
+    title: "Window Cleaning Worcester MA | Streak-Free Shine",
+    metaDescription:
+      "Interior & exterior window cleaning in Worcester, MA. Streak-free glass, screens, tracks & skylights for homes and storefronts. Free quote: (508) 736-0089.",
+    h1: "Window Cleaning in Worcester, MA",
+    kicker: "Interior & Exterior Glass",
+    excerpt:
+      "Streak-free windows inside and out — glass, screens, tracks and skylights — so your home or storefront lets in all the light it should.",
+    image: "/images/2015/07/After-power-washing-house-Leicester-MA-2.jpg",
+    imageAlt: "Home with freshly cleaned windows in Worcester, MA — Pro Pressure Washing",
+    intro: [
+      "Clean windows change how a whole home or storefront feels — more light, a clearer view, and a finished look that a freshly washed house exterior deserves. Pro Pressure Washing cleans windows inside and out across Worcester and the surrounding towns, hand-detailing the glass and frames for a genuinely streak-free result, not a quick spray-and-rinse.",
+      "It's the perfect finishing touch after a house wash, and a service homeowners and small businesses schedule on its own each spring and fall.",
+    ],
+    sections: [
+      {
+        h2: "Inside and out, streak-free",
+        body: [
+          "We clean exterior glass, and — when you'd like — interior glass too, along with the frames and sills. Our process removes hard-water spots, pollen, cobwebs and the film that builds up over the seasons, finishing each pane so there are no streaks left in the low afternoon sun.",
+        ],
+      },
+      {
+        h2: "Screens, tracks & skylights",
+        body: [
+          "Windows are more than glass. We wipe down screens, clear out the dirt and dead bugs from the tracks, and reach the high, awkward windows and skylights that homeowners can't safely get to. For roofs with skylights, we clean the glass while we're up there for a roof soft wash.",
+        ],
+      },
+    ],
+    benefits: [
+      "Streak-free hand-detailed glass, inside and out",
+      "Screens, sills and tracks cleaned too",
+      "Skylights and hard-to-reach windows handled safely",
+      "The perfect finish after a house wash",
+    ],
+    pricing: [
+      { label: "Exterior windows (whole home)", range: "$150–$300", note: "by window count" },
+      { label: "Interior + exterior", range: "$250–$450" },
+      { label: "Skylights / add-ons", range: "quoted on site" },
+    ],
+    pricingNote:
+      "Price depends on the number and type of windows — we quote every job for free. TODO(client): confirm window-cleaning ranges and whether interior cleaning is offered.",
+    faqs: [
+      {
+        q: "Do you clean the inside of the windows too?",
+        a: "Yes — we offer interior and exterior window cleaning. Many homeowners do exterior only in spring and both inside and out for a deeper seasonal clean. Just let us know what you'd like.",
+      },
+      {
+        q: "Can you reach high windows and skylights?",
+        a: "Yes. We have the equipment to safely clean high, hard-to-reach windows and skylights, including glass on second and third stories that you can't get to from a ladder.",
+      },
+      {
+        q: "Do you clean windows for storefronts and offices?",
+        a: "We do. Clean storefront glass makes a big difference to customers — we clean commercial windows on a one-time or recurring schedule. Call (508) 736-0089 to set it up.",
+      },
+      {
+        q: "Should I get windows cleaned after a house wash?",
+        a: "It's the ideal time. A house wash can leave spots on the glass; finishing with a window cleaning gives the whole exterior a truly complete, polished look.",
+      },
+    ],
+    related: ["house-washing-worcester-ma", "gutter-cleaning-worcester-ma", "roof-cleaning-worcester-ma"],
   },
 ];
 
@@ -675,10 +751,17 @@ export const commercialServices: ServicePage[] = [
           "Box trucks and vans, pickups, trailers, dump bodies, landscaping and construction equipment, and more. We remove road salt, mud, brake dust and grime that corrode vehicles and hide your logos.",
         ],
       },
+      {
+        h2: "Heavy equipment cleaning",
+        body: [
+          "Beyond road vehicles, we clean heavy construction and landscaping equipment — excavators, loaders, skid steers, mowers and attachments. Caked-on mud, clay and grease don't just look bad; they hide leaks and wear and accelerate corrosion. Regular washing keeps your equipment inspection-ready and extends its service life.",
+        ],
+      },
     ],
     benefits: [
       "On-site service — no lost driver time",
       "Removes corrosive road salt and grime",
+      "Heavy construction & landscaping equipment cleaned too",
       "Keeps branding and logos looking sharp",
       "Weekly, biweekly or monthly schedules",
     ],
@@ -700,6 +783,10 @@ export const commercialServices: ServicePage[] = [
       {
         q: "How often should we wash our fleet?",
         a: "Most fleets go weekly or biweekly to stay presentable and protect the vehicles. We'll recommend a schedule based on your routes and usage.",
+      },
+      {
+        q: "Do you clean heavy construction equipment?",
+        a: "Yes. Along with trucks and vans, we clean heavy construction and landscaping equipment — excavators, loaders, skid steers and mowers — removing caked mud and grease to keep them inspection-ready and protected from corrosion.",
       },
     ],
     related: ["commercial-pressure-washing", "commercial-building-washing", "storefront-sidewalk-cleaning"],
