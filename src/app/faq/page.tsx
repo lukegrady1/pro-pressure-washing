@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section } from "@/components/Section";
-import FaqWidget from "@/components/FaqWidget";
+import Accordion from "@/components/Accordion";
 import AboutSection from "@/components/AboutSection";
 import QuoteSection from "@/components/QuoteSection";
 import Testimonials from "@/components/Testimonials";
 import JsonLd from "@/components/JsonLd";
+import { faqs } from "@/data/faqs";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
@@ -33,7 +34,9 @@ export default function FaqPage() {
       />
 
       <Section>
-        <FaqWidget />
+        <div className="mx-auto max-w-3xl">
+          <Accordion items={faqs} />
+        </div>
       </Section>
 
       <AboutSection />
