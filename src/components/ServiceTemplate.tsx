@@ -109,28 +109,24 @@ export default function ServiceTemplate({ service }: { service: ServicePage }) {
         </div>
       </Section>
 
-      {/* Pricing guidance */}
+      {/* Fast, free quotes — we don't publish prices, we route to a quote */}
       <Section className="bg-neutral-50">
         <SectionHeading
-          title="Pricing Guidance"
-          intro="The competition won't publish prices — we will. These are typical ranges; every job gets a firm, free quote before we start."
+          title="Fast, Free Quotes"
+          intro="Every property is different, so we give you an exact price up front — no surprises, no pressure. Fill out our quick quote form or call for a fast, free quote."
         />
-        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-card">
-          <ul className="divide-y divide-neutral-200">
-            {service.pricing.map((row) => (
-              <li key={row.label} className="flex items-center justify-between gap-4 px-6 py-4">
-                <div>
-                  <p className="font-semibold text-heading">{row.label}</p>
-                  {row.note && <p className="text-xs text-body-muted">{row.note}</p>}
-                </div>
-                <p className="shrink-0 font-bold text-brand-red">{row.range}</p>
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Link href="/contact-us/" className="btn">
+            Get a Free Quote
+          </Link>
+          <a
+            href={`tel:${business.phone.tel}`}
+            className="btn btn-outline !border-brand-red !text-brand-red hover:!bg-brand-red hover:!text-white"
+          >
+            <PhoneIcon width={16} height={16} />
+            Call {business.phone.display}
+          </a>
         </div>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-xs text-body-muted">
-          {service.pricingNote}
-        </p>
       </Section>
 
       {/* FAQs */}

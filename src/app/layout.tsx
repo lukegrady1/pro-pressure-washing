@@ -5,6 +5,7 @@ import { business } from "@/data/business";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import ScrollToTop from "@/components/ScrollToTop";
 import { localBusinessSchema } from "@/lib/schema";
 
 const roboto = Roboto({
@@ -45,6 +46,7 @@ export default function RootLayout({
       className={`${roboto.variable} ${robotoSlab.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <ScrollToTop />
         <JsonLd data={localBusinessSchema()} />
         <a
           href="#main"

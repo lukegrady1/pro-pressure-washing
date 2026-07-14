@@ -7,6 +7,7 @@ import { business } from "@/data/business";
 import { primaryNav, residentialServiceNav } from "@/data/nav";
 import { ChevronDownIcon } from "@/components/Icons";
 import TopBar from "@/components/TopBar";
+import { scrollToTop } from "@/components/ScrollToTop";
 
 // Shared underline-on-hover treatment for desktop nav links.
 const linkBase =
@@ -29,7 +30,7 @@ export default function Header() {
       <TopBar />
       <div className="border-b border-neutral-200 bg-white shadow-sm">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-3 sm:px-6">
-          <Link href="/" className="shrink-0" aria-label={`${business.name} — home`}>
+          <Link href="/" onClick={scrollToTop} className="shrink-0" aria-label={`${business.name} — home`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={business.logo}
@@ -52,6 +53,7 @@ export default function Header() {
                   <Link
                     href={link.href}
                     onMouseEnter={() => setServicesOpen(true)}
+                    onClick={scrollToTop}
                     className={`flex items-center gap-1 ${linkBase} ${linkState(
                       isActive(link.href)
                     )}`}
@@ -88,13 +90,14 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={scrollToTop}
                   className={`${linkBase} ${linkState(isActive(link.href))}`}
                 >
                   {link.label}
                 </Link>
               )
             )}
-            <Link href="/contact-us/" className="btn ml-3">
+            <Link href="/contact-us/" onClick={scrollToTop} className="btn ml-3">
               Free Quote
             </Link>
           </nav>
@@ -126,7 +129,10 @@ export default function Header() {
               <div key={link.href}>
                 <Link
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setMobileOpen(false);
+                    scrollToTop();
+                  }}
                   className={`block border-b border-neutral-100 px-5 py-3 text-sm font-semibold uppercase ${
                     isActive(link.href) ? "text-brand-red" : "text-charcoal"
                   }`}
@@ -138,7 +144,10 @@ export default function Header() {
                     <Link
                       key={s.href}
                       href={s.href}
-                      onClick={() => setMobileOpen(false)}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        scrollToTop();
+                      }}
                       className="block border-b border-neutral-100 bg-neutral-50 px-8 py-2.5 text-sm text-body"
                     >
                       {s.label}
@@ -149,7 +158,10 @@ export default function Header() {
             <div className="p-4">
               <Link
                 href="/contact-us/"
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  setMobileOpen(false);
+                  scrollToTop();
+                }}
                 className="btn w-full"
               >
                 Get a Free Quote

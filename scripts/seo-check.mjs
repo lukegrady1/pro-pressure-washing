@@ -157,8 +157,11 @@ for (const p of pages) {
     else OK(`town name ${nameCount}×`);
   }
 
+  // Ideal density is ~0.5–1.5%; we only WARN above 2% (the practical stuffing
+  // line). A page using its keyword 5–8× naturally lands ~1.5–2% — that's
+  // healthy, not stuffing, so it shouldn't nag.
   const density = words ? ((kw * core.split(" ").length) / words) * 100 : 0;
-  if (density > 1.5) WARN(`keyword density ${density.toFixed(1)}% > 1.5% (stuffing risk)`);
+  if (density > 2) WARN(`keyword density ${density.toFixed(1)}% > 2% (stuffing risk)`);
 }
 
 // ---- core static pages: char-check rendered HTML in ./out (if built) ------

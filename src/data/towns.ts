@@ -1,4 +1,4 @@
-// Town landing pages — one entry per town, UNIQUE copy each (SITE-SPEC 4.4).
+// Town landing pages — one entry per town, UNIQUE copy each (SITE-SPEC 4.4 / 5.1).
 // No boilerplate reuse: real neighborhoods, housing stock, distance/response
 // time from Holden, and town-specific FAQs. This is how we beat the
 // competitor's near-duplicate town pages.
@@ -36,8 +36,9 @@ export const towns: Town[] = [
       "From Chaffins and Jefferson to Dawson and the neighborhoods off Reservoir Street and Main Street, we soft wash homes, clean roofs, restore decks and pressure wash concrete for Holden families every week.",
     ],
     local: [
-      "Holden's housing is mostly vinyl and clapboard colonials, capes and ranches on wooded, well-treed lots — beautiful, but shade and tree cover mean mold, algae and those black roof streaks take hold fast, especially on north-facing walls and roofs near the Trout Brook and reservoir areas.",
-      "We know the local housing stock: the mature neighborhoods where cedar and older vinyl need a gentle soft-wash touch, and the newer developments where a yearly maintenance wash keeps everything looking new. Being minutes away means we can also handle quick jobs — a single deck, a walkway, a gutter brightening — without it being a whole production.",
+      "Holden's housing is mostly vinyl and clapboard colonials, capes and ranches on wooded, well-treed lots — beautiful, but shade and tree cover mean mold, algae and those black roof streaks take hold fast, especially on north-facing walls and roofs near the Trout Brook and reservoir areas. We know the local housing stock: the mature neighborhoods where cedar and older vinyl need a gentle soft-wash touch, and the newer developments where a yearly maintenance wash keeps everything looking new.",
+      "The most-requested pressure washing services in Holden are house soft washing and roof cleaning — the two problems our tree cover creates most — followed by deck restoration and concrete cleaning for driveways, walkways and patios. Because so many Holden lots back onto woods and wetlands, we lean on eco-friendly, biodegradable solutions that are safe for gardens, pets and the many homes here on well water.",
+      "Being minutes away is the real advantage. We can handle the big jobs — a full house wash plus roof and gutters — but also the quick ones a distant company won't bother with: a single deck, a mossy front walk, a gutter brightening before the holidays. Timing matters in New England, too; we help Holden homeowners get the pollen off in late spring and the mildew and leaf stains off before winter sets in.",
     ],
     faqs: [
       {
@@ -51,6 +52,10 @@ export const towns: Town[] = [
       {
         q: "My roof and north wall are covered in black streaks — can you help?",
         a: "Absolutely. Holden's shaded, tree-lined lots make black roof streaks and green siding very common. We remove both safely with low-pressure soft washing that won't harm your shingles or siding.",
+      },
+      {
+        q: "When is the best time to have my Holden home pressure washed?",
+        a: "Late spring is popular for clearing off winter grime and pollen, and early fall is ideal for removing mildew and leaf stains before winter. We work year-round in Holden, though, so any time you notice buildup is a good time to call.",
       },
     ],
   },
@@ -69,8 +74,10 @@ export const towns: Town[] = [
       "Just 15 minutes from our Holden base, we're close enough to serve Worcester reliably and fast — whether it's a single-family colonial, a classic triple-decker, or a storefront that needs its sidewalk cleaned before opening.",
     ],
     local: [
-      "Worcester's iconic triple-deckers and multifamilies are often vinyl or older wood clapboard packed close together, where mildew and pollution staining build up on the shaded sides. These need soft washing, not high pressure — high pressure forces water behind old clapboards and cracks aging vinyl. We clean them the safe way.",
-      "The city's brick multifamilies, porches and concrete stoops and stairs are a different job — durable masonry and concrete that respond beautifully to hot-water pressure washing. From Elm Park-area Victorians to newer West Side colonials, we tailor the approach to the property, and we're fully insured for tenant-occupied and rental buildings.",
+      "Worcester's iconic triple-deckers and multifamilies are often vinyl or older wood clapboard packed close together, where mildew and pollution staining build up on the shaded sides. These need soft washing, not high pressure — high pressure forces water behind old clapboards and cracks aging vinyl. The city's brick multifamilies, porches and concrete stoops and stairs are a different job: durable masonry and concrete that respond beautifully to hot-water pressure washing.",
+      "From Elm Park-area Victorians to newer West Side colonials, we tailor the approach to the property, and we're fully insured for tenant-occupied and rental buildings — the paperwork landlords and property managers actually ask for. Rental owners across Worcester use us to keep multi-unit exteriors presentable between tenants and to knock down the green algae that makes a well-kept building look neglected.",
+      "The most common pressure washing requests we get in Worcester are house and triple-decker soft washing, concrete stair and sidewalk cleaning, and porch and deck cleaning. Being only 15 minutes away in Holden, we can quote quickly and get city jobs scheduled without the delays a company coming from farther out would have — and there's no long-distance travel padding the price.",
+      "Worcester's dense neighborhoods bring their own challenges that a suburban crew doesn't always plan for: tight side yards between houses, shared driveways, on-street parking, and the need to protect a neighbor's property just a few feet away. We're used to working carefully in close quarters, controlling overspray, and keeping walkways and shared areas clear while we work — so a wash on a packed city street goes smoothly for you and the people next door.",
     ],
     faqs: [
       {
@@ -84,6 +91,10 @@ export const towns: Town[] = [
       {
         q: "How quickly can you reach Worcester?",
         a: "We're only about 15 minutes away in Holden, so we serve the entire city quickly. Call (508) 736-0089 for scheduling.",
+      },
+      {
+        q: "Do you work with Worcester landlords and property managers?",
+        a: "Yes. We provide certificates of insurance and handle multi-unit and rental properties across the city, keeping exteriors presentable between tenants and on a recurring schedule when that's easier to budget.",
       },
     ],
   },
@@ -102,8 +113,10 @@ export const towns: Town[] = [
       "We're just 10 minutes from most Paxton addresses, so we can get out quickly for everything from a full house wash to a single mossy walkway.",
     ],
     local: [
-      "Homes around Moore State Park, Anna Maria College and the town center sit on large, tree-shaded lots — postcard New England, but ideal conditions for roof algae and north-side mildew. Cedar shingle and older wood exteriors are common and demand a careful low-pressure touch.",
-      "We handle the realities of rural properties: long driveways and walkways streaked with moss, decks that back onto the woods and stay damp, and roofs under heavy canopy that develop black streaks years before homes in sunnier towns. Everything is cleaned at the right pressure for the surface, with eco-friendly solutions safe for well water and gardens.",
+      "Homes around Moore State Park, Anna Maria College and the town center sit on large, tree-shaded lots — postcard New England, but ideal conditions for roof algae and north-side mildew. Cedar shingle and older wood exteriors are common in Paxton and demand a careful low-pressure touch; a high-pressure blast would fur the wood and drive water behind the boards. Newer homes here tend toward vinyl, which we keep looking new with a gentle yearly maintenance wash.",
+      "Rural properties come with their own realities, and Paxton pressure washing usually means more than just the house: long driveways and walkways streaked with moss, decks that back onto the woods and stay damp, sheds and outbuildings, and roofs under heavy canopy that develop black streaks years before homes in sunnier towns. We clean all of it at the correct pressure for each surface.",
+      "Because so many Paxton homes are on private wells and surrounded by gardens and woodland, we use eco-friendly, biodegradable cleaning solutions and rinse landscaping before and after every job. It's the responsible way to work in a town like this, and it means you never have to worry about runoff into your well, your vegetable garden or the conservation land next door.",
+      "Paxton's elevation and open, hilly farmland also mean wind-driven grime and pollen coat homes from every direction, not just the shaded north side. We wash the whole exterior — all four sides, the trim, the soffits and eaves — so you're not left with one clean wall and three dirty ones. And since we're right next door in Holden, a Paxton pressure washing job is one of the easiest for us to schedule quickly, even in the busy spring and early-summer stretch.",
     ],
     faqs: [
       {
@@ -117,6 +130,10 @@ export const towns: Town[] = [
       {
         q: "How far is Paxton from your base?",
         a: "Paxton borders Holden, so we're only about 10 minutes away and can usually schedule quickly. Call (508) 736-0089.",
+      },
+      {
+        q: "Do you clean sheds, outbuildings and long driveways too?",
+        a: "Yes. Paxton pressure washing often includes more than the house — we clean outbuildings, fences, and the long moss-streaked driveways and walkways that come with rural lots, all in the same visit when you'd like.",
       },
     ],
   },
@@ -135,8 +152,10 @@ export const towns: Town[] = [
       "We're about 15 minutes from Princeton and serve the whole town, from the center to East Princeton and the homes scattered along the mountain roads.",
     ],
     local: [
-      "Princeton's housing skews toward larger, higher-value homes on wooded acreage, plus classic antique colonials and capes near the town common. Many have cedar, wood clapboard or premium siding that must be cleaned gently — the last thing these homes need is a high-pressure blast stripping paint or driving water behind the boards.",
-      "The elevation and tree cover around Wachusett mean north-facing roofs and walls streak early and heavily. We treat that algae and moss at the root, and we handle the long driveways, stone walkways and hillside decks that come with Princeton's rural, scenic lots.",
+      "Princeton's housing skews toward larger, higher-value homes on wooded acreage, plus classic antique colonials and capes near the town common. Many have cedar, wood clapboard or premium siding that must be cleaned gently — the last thing these homes need is a high-pressure blast stripping paint or driving water behind the boards. The elevation and tree cover around Wachusett mean north-facing roofs and walls streak early and heavily, so roof cleaning and house soft washing are the services we're called for most in Princeton.",
+      "Higher up, the longer damp season takes a real toll. Snow lingers, shade is constant, and moss gets a firm hold on roofs, stone walkways and the north sides of homes. We treat that moss and algae at the root rather than just rinsing it, which is the only way to keep it from racing back at this elevation — and we do it without ever putting high pressure to a roof or cedar wall.",
+      "Princeton's rural, scenic lots also come with long driveways, stone and paver walkways, and hillside decks that weather fast. Our pressure washing covers all of it: concrete and stone hardscaping cleaned with the right technique, decks brightened and prepped for stain, and homes soft washed top to bottom. Everything is done with eco-friendly solutions, which matters on the well-served, garden-heavy properties that are the norm up here.",
+      "Because Princeton properties are spread out and often set well back from the road, we come prepared to be self-sufficient — reaching the far sides of a home, the detached garage or barn, and the long approach walkways without needing to be right on top of a spigot. It's the kind of rural job an out-of-town company can find awkward, but for a Holden-based crew fifteen minutes away, a Princeton home tucked into the hills near Wachusett is a familiar, straightforward visit.",
     ],
     faqs: [
       {
@@ -150,6 +169,10 @@ export const towns: Town[] = [
       {
         q: "Is Princeton within your service area?",
         a: "Absolutely — it's about 15 minutes north of our Holden base and part of our regular route. Call (508) 736-0089 for a free quote.",
+      },
+      {
+        q: "Why does moss come back so fast on my Princeton roof?",
+        a: "Princeton's elevation, shade and long damp seasons are ideal for moss and algae. We kill the growth at the root instead of just rinsing it, which keeps it away far longer, and we can set up periodic maintenance for heavily shaded homes.",
       },
     ],
   },
@@ -168,8 +191,10 @@ export const towns: Town[] = [
       "We're about 15 minutes from Sterling and cover the whole town, from the center and Route 12 corridor out to the orchard roads and lakeside homes.",
     ],
     local: [
-      "Sterling has a wide mix: antique colonials and farmhouses near the common, vinyl-sided colonials in the newer subdivisions, and farm properties with barns, outbuildings and long fence lines. Older wood and cedar need a gentle soft wash, while newer vinyl benefits from a yearly maintenance clean.",
-      "Homes near the orchards and along shaded country roads see heavy roof algae and green north walls, and the area's farm fencing and decks weather quickly. We clean it all — houses, roofs, decks, fences and concrete — with eco-friendly solutions that are safe around gardens, animals and well water.",
+      "Sterling has a wide mix of housing: antique colonials and farmhouses near the common, vinyl-sided colonials in the newer subdivisions, and farm properties with barns, outbuildings and long fence lines. Older wood and cedar need a gentle soft wash, while newer vinyl benefits from a yearly maintenance clean. Homes near the orchards and along shaded country roads see heavy roof algae and green north walls, which makes roof cleaning and house soft washing two of our most-requested Sterling services.",
+      "Farm and country properties are a specialty of ours here. Sterling pressure washing often means barns and outbuildings, fence lines that have grayed and greened over the years, and equipment pads and concrete that pick up grime through the seasons. We match the method to each surface and use eco-friendly solutions that are safe around animals, gardens, orchards and the well water most of these properties run on.",
+      "Sterling's seasons drive the work: pollen and winter grime in the spring, mildew and pond-adjacent damp through the summer, and leaf and berry staining in the fall. We help homeowners time their pressure washing to stay ahead of it — a spring house wash to reset after winter, or a fall cleanup of the deck, walkways and gutters before the snow flies.",
+      "The town's fruit trees and heavy tree cover are a big part of what makes Sterling beautiful and also what makes exteriors work harder. Sap, pollen, bird droppings and berry stains land on siding, decks and cars all season, and the shade keeps everything damp enough for algae to thrive. Our soft washing lifts all of it without harming the surface underneath — and because we're only about fifteen minutes up the road in Holden, we can get out to Sterling quickly whenever you notice the buildup starting.",
     ],
     faqs: [
       {
@@ -184,6 +209,10 @@ export const towns: Town[] = [
         q: "How far is Sterling from your base?",
         a: "About 15 minutes north of Holden. We're out that way regularly, so scheduling is easy — call (508) 736-0089.",
       },
+      {
+        q: "When should I schedule pressure washing in Sterling?",
+        a: "Spring is great for clearing winter grime and pollen, and fall is ideal for removing mildew and leaf and berry stains before winter. We work year-round in Sterling, so whenever you notice buildup, it's a good time to call.",
+      },
     ],
   },
   {
@@ -192,7 +221,7 @@ export const towns: Town[] = [
     keyword: "pressure washing Rutland MA",
     title: "Pressure Washing Rutland MA | Pro Pressure Washing",
     metaDescription:
-      "Pressure washing in Rutland, MA. Soft washing for colonial subdivisions plus roof, deck & concrete cleaning. Local & insured. Free quote: (508) 736-0089.",
+      "Pressure washing in Rutland, MA. Soft washing for colonial subdivisions plus roof, deck & concrete cleaning. Insured. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in Rutland, MA",
     distanceFromHolden:
       "Rutland is about 15 minutes northwest of Holden — a town we serve constantly.",
@@ -201,8 +230,10 @@ export const towns: Town[] = [
       "We're about 15 minutes away and know the town's subdivisions well, so scheduling is quick and easy.",
     ],
     local: [
-      "As the geographic center of Massachusetts, Rutland gets the full range of New England weather, and its many newer vinyl colonials are prime candidates for algae and pollen buildup on shaded walls. A gentle annual soft wash is the ideal maintenance — it keeps the vinyl looking new and stops mold from getting established.",
-      "Beyond the subdivisions, Rutland has rural properties with decks, fences and long concrete or paver driveways that weather in the shade of surrounding woods. We clean all of it, matching pressure to the surface and using eco-friendly solutions safe for lawns, gardens and pets.",
+      "As the geographic center of Massachusetts, Rutland gets the full range of New England weather, and its many newer vinyl colonials are prime candidates for algae and pollen buildup on shaded walls. A gentle annual soft wash is the ideal maintenance — it keeps the vinyl looking new and stops mold from ever getting established. This is the bread and butter of pressure washing in Rutland: keeping newer homes in the subdivisions off West Road, Pommogussett Road and beyond looking the way they did the day they were built.",
+      "Beyond the subdivisions, Rutland has plenty of rural and semi-wooded properties with decks, fences and long concrete or paver driveways that weather in the shade of surrounding trees. Decks in particular gray and grow slick here, and we clean and brighten a lot of them — restoring the wood and prepping it for stain so homeowners get years more life out of it.",
+      "Because Rutland's homes are relatively new but its weather isn't gentle, timing makes a big difference. We help homeowners set up a simple yearly rhythm: a spring house wash to clear pollen and winter film, and a deck or concrete cleaning as the outdoor season kicks off. It keeps everything looking sharp without ever letting the algae get a foothold that's harder and costlier to remove later.",
+      "Rutland's newer neighborhoods also tend to have homes of a similar age and style close together, which means when one house on the street greens up, the rest usually aren't far behind. We wash a lot of Rutland homes side by side for exactly that reason, and neighbors often coordinate to have their pressure washing done around the same time. It keeps the whole street looking sharp — and there's no travel surcharge, since Rutland is only about fifteen minutes from our Holden base.",
     ],
     faqs: [
       {
@@ -216,6 +247,10 @@ export const towns: Town[] = [
       {
         q: "Is Rutland in your service area?",
         a: "Yes, it's about 15 minutes northwest of our Holden base and a town we serve constantly. Call (508) 736-0089 for a free quote.",
+      },
+      {
+        q: "How often should I have my Rutland home pressure washed?",
+        a: "For most newer vinyl homes here, a gentle wash once a year keeps the siding looking new and stops algae from getting established. Heavily shaded or north-facing walls may benefit from a touch-up in between.",
       },
     ],
   },
@@ -234,8 +269,10 @@ export const towns: Town[] = [
       "We're about 10 minutes from most of town, from Oakdale to the neighborhoods overlooking the water.",
     ],
     local: [
-      "Many West Boylston homes are older colonials, capes and lakeside properties, along with newer developments. The proximity to the reservoir and the Quinapoxet and Stillwater rivers keeps the air damp, so north-facing roofs and walls streak early and decks stay slick — classic soft-wash territory.",
-      "We're especially careful with eco-friendly, biodegradable solutions given the watershed, and we clean everything from lakeside decks and docks-adjacent structures to concrete patios and long driveways. Older wood and cedar get a gentle touch; newer vinyl gets a maintenance wash that keeps it new.",
+      "Many West Boylston homes are older colonials, capes and lakeside properties, along with newer developments. The proximity to the reservoir and the Quinapoxet and Stillwater rivers keeps the air damp, so north-facing roofs and walls streak early and decks stay slick — classic soft-wash territory. Roof cleaning and house washing are the services West Boylston homeowners ask for most, precisely because the humidity here grows algae faster than in drier towns.",
+      "Working this close to the Wachusett Reservoir watershed, we're especially careful with our eco-friendly, biodegradable solutions and our rinsing, so nothing runs off where it shouldn't. It's a responsibility we take seriously in West Boylston, and it's the right way to keep the pressure washing gentle on both your home and the water everyone here depends on.",
+      "The lakeside setting adds specific jobs to the mix: decks and porches that face the water and never fully dry out, boathouse and shed exteriors, and stone or concrete patios and steps that grow moss in the shade. We clean older wood and cedar gently, keep newer vinyl looking new with a maintenance wash, and restore the hardscaping so the whole property makes the most of that reservoir view.",
+      "Because West Boylston borders Holden, we treat it as part of our home turf — quick to reach, quick to quote, and easy to fit in for a small job as well as a big one. Whether you're in Oakdale, near the old center, or on one of the roads overlooking the water, a local crew that's ten minutes away means you're not paying for travel time and you're not waiting weeks to get on the schedule.",
     ],
     faqs: [
       {
@@ -250,6 +287,10 @@ export const towns: Town[] = [
         q: "How close are you to West Boylston?",
         a: "West Boylston borders Holden, so we're only about 10 minutes away. Call (508) 736-0089 to schedule.",
       },
+      {
+        q: "Can you clean lakeside decks and patios that stay damp?",
+        a: "Yes. Waterfront decks, porches and stone or concrete patios that never fully dry out are common here and grow slick with algae. We clean and brighten them so they're safe to walk on and look their best.",
+      },
     ],
   },
   {
@@ -258,7 +299,7 @@ export const towns: Town[] = [
     keyword: "pressure washing Boylston MA",
     title: "Pressure Washing Boylston MA | Pro Pressure Washing",
     metaDescription:
-      "Pressure washing in Boylston, MA. Soft washing for homes on wooded lots, plus roof, deck & concrete cleaning. Local, insured. Free quote: (508) 736-0089.",
+      "Pressure washing in Boylston, MA. Soft washing for homes on wooded lots, plus roof, deck & concrete cleaning. Insured. Free quote: (508) 736-0089.",
     h1: "Pressure Washing in Boylston, MA",
     distanceFromHolden:
       "Boylston is about 15 minutes east of Holden and part of our regular service area.",
@@ -267,8 +308,10 @@ export const towns: Town[] = [
       "We're about 15 minutes from Boylston and serve the whole town.",
     ],
     local: [
-      "Homes in Boylston range from antique colonials and farmhouses to larger custom homes on wooded acreage. Cedar, wood clapboard and premium siding are common, and all of it needs the careful low-pressure touch of soft washing rather than a high-pressure blast.",
-      "The heavy tree cover and proximity to the Wachusett Reservoir keep properties damp and shaded, so roofs streak and decks gray quickly. We clean houses, roofs, decks and the long stone or concrete walkways and patios that come with Boylston's estate-style lots — all with eco-friendly solutions safe for gardens and well water.",
+      "Homes in Boylston range from antique colonials and farmhouses to larger custom homes on wooded acreage. Cedar, wood clapboard and premium siding are common, and all of it needs the careful low-pressure touch of soft washing rather than a high-pressure blast. The heavy tree cover and proximity to the Wachusett Reservoir keep properties damp and shaded, so roofs streak and decks gray quickly — which is why roof cleaning and house soft washing lead the pressure washing requests we get in Boylston.",
+      "Estate-style lots come with estate-style hardscaping. Boylston homes often have long stone and concrete walkways, paver patios, pool decks and stone steps that pick up moss and grime in the shade. We clean all of it with the right technique for the material — controlled pressure for durable stone and concrete, gentle care for anything more delicate — and can re-sand paver joints so patios look and perform like new.",
+      "Because so much of Boylston is wooded, garden-heavy and on private wells, we work exclusively with eco-friendly, biodegradable solutions and rinse landscaping thoroughly. It keeps the cleaning safe for the mature plantings, gardens and conservation areas that make the town what it is, and it's simply the right way to work on these properties.",
+      "Boylston's larger lots also mean the exterior work adds up: a big house, a long roof, plenty of hardscaping and often a barn, garage or pool house as well. Rather than make you line up a different contractor for each, we handle the whole property in one visit — house, roof, gutters, deck, walkways and outbuildings — and give you a single quote for it. For homeowners near Tower Hill and the reservoir who want their property looking its best for the season, it's the simplest way to get everything done at once.",
     ],
     faqs: [
       {
@@ -282,6 +325,10 @@ export const towns: Town[] = [
       {
         q: "Is Boylston within your service area?",
         a: "Yes — about 15 minutes east of Holden and part of our regular route. Call (508) 736-0089 for a free quote.",
+      },
+      {
+        q: "Are your cleaning products safe for my gardens and well?",
+        a: "Yes. We use biodegradable, eco-friendly solutions and rinse landscaping before and after, which matters on Boylston's wooded, garden-heavy properties that mostly run on private wells.",
       },
     ],
   },
@@ -301,8 +348,10 @@ export const towns: Town[] = [
       "We serve all of Shrewsbury, from the Lake Quinsigamond shoreline and White City area to the newer developments off Route 20 and Main Street, about 20 minutes from our Holden base.",
     ],
     local: [
-      "Shrewsbury's housing runs from mid-century capes and colonials to large, newer custom homes, often with premium siding, extensive hardscaping and beautiful decks that owners want kept immaculate. These are homes where a careful, professional soft wash matters — no cracked vinyl, no stripped stain, just a clean, even result.",
-      "Properties near Lake Quinsigamond and the town's many tree-lined streets deal with extra humidity and shade, so roof streaks and north-wall algae are common. We also clean the paver patios, pool decks and long driveways that come with Shrewsbury's higher-end homes.",
+      "Shrewsbury's housing runs from mid-century capes and colonials to large, newer custom homes, often with premium siding, extensive hardscaping and beautiful decks that owners want kept immaculate. These are homes where a careful, professional soft wash matters — no cracked vinyl, no stripped stain, just a clean, even result. House soft washing and roof cleaning are our most-requested pressure washing services in Shrewsbury, followed closely by paver-patio and pool-deck cleaning at the higher-end homes.",
+      "Properties near Lake Quinsigamond and along the town's many tree-lined streets deal with extra humidity and shade, so roof streaks and north-wall algae show up early and come back if they aren't treated properly. We kill the growth at the root rather than just rinsing the surface, which is what keeps these homes looking sharp between cleanings — important in a town where the neighbors notice.",
+      "The higher-end homes here also mean more hardscaping to care for: paver patios, pool surrounds, stone walkways and long driveways. We clean pavers at a controlled pressure that protects the surface and joints, re-sand the joints on request, and restore stamped and stained concrete to an even finish. It's the detail work that makes a Shrewsbury property look genuinely maintained, not just occasionally cleaned.",
+      "Shrewsbury moves fast, and a lot of our work here is tied to real estate — sellers getting a home camera-ready for listing photos and open houses, and new owners resetting a property right after they move in. A house wash, a roof cleaning and a driveway restoration are some of the highest-return curb-appeal projects there are before a sale, and we're used to turning them around on a tight timeline so your Shrewsbury home looks its best exactly when it needs to.",
     ],
     faqs: [
       {
@@ -316,6 +365,10 @@ export const towns: Town[] = [
       {
         q: "How far is Shrewsbury from you?",
         a: "About 20 minutes southeast of our Holden base, and a town we serve often. Call (508) 736-0089 for a free quote.",
+      },
+      {
+        q: "Can you re-sand my paver patio after cleaning it?",
+        a: "Yes. We clean pavers at a controlled pressure that protects the joints, then re-sand them on request so your patio looks and performs like new — a popular add-on at Shrewsbury's higher-end homes.",
       },
     ],
   },
@@ -335,8 +388,10 @@ export const towns: Town[] = [
       "We're about 30 minutes from Westborough and cover the whole town, residential and commercial.",
     ],
     local: [
-      "Westborough's newer subdivisions are full of vinyl-sided colonials that benefit from a yearly maintenance wash, while the downtown and older neighborhoods have wood and cedar homes that need a gentler soft-wash approach. Tree-lined streets and wet lowland areas keep roofs and north walls prone to algae.",
-      "With a strong commercial and office presence near the highway corridor, Westborough is also a place we clean storefronts, office buildings, sidewalks and business exteriors — fully insured and scheduled around business hours. Whatever the property, we match the method to the surface.",
+      "Westborough's newer subdivisions are full of vinyl-sided colonials that benefit from a yearly maintenance wash, while the downtown and older neighborhoods have wood and cedar homes that need a gentler soft-wash approach. Tree-lined streets and wet lowland areas near the Assabet keep roofs and north walls prone to algae, so house soft washing and roof cleaning are the pressure washing services Westborough homeowners request most.",
+      "With a strong commercial and office presence near the highway corridor, Westborough is also a place we do a lot of commercial pressure washing — storefronts, office buildings, sidewalks and business exteriors, fully insured and scheduled around business hours. For property managers along Route 9 and near the I-495 interchange, we're one insured vendor who can keep an entire property presentable, from the building facade to the entrance walk.",
+      "Whether it's a home or a business, the approach is the same: match the method to the surface. Delicate siding and painted facades get low-pressure soft washing; concrete walkways, loading areas and parking-lot aprons get hot-water pressure washing that lifts gum, grease and salt film evenly. It's how we keep both a Westborough family's colonial and a downtown storefront looking their best.",
+      "The tech and office parks off Route 9 and Computer Drive have brought a lot of newer construction to Westborough, and those buildings — plus the apartment and condo developments around them — benefit from a regular exterior wash to stay looking current. For homeowners, the same growth means many properties are only a couple of decades old, with vinyl and Hardie siding that responds beautifully to a gentle annual soft wash. Whatever corner of Westborough you're in, we tailor the pressure washing to the property and keep it on a schedule that's easy to remember. From the historic homes near the town common to the newest subdivisions and the businesses along the highway corridor, we bring the same insured, careful work and an honest quote before we start.",
     ],
     faqs: [
       {
@@ -350,6 +405,10 @@ export const towns: Town[] = [
       {
         q: "Is Westborough within your service area?",
         a: "Yes, it's about 30 minutes southeast of Holden. Call (508) 736-0089 for a free quote.",
+      },
+      {
+        q: "Do you provide certificates of insurance for commercial jobs?",
+        a: "Yes. We carry full liability insurance and provide COIs on request for Westborough property managers and business owners, and we schedule commercial pressure washing around your hours.",
       },
     ],
   },
@@ -369,8 +428,10 @@ export const towns: Town[] = [
       "We're about 25 minutes from Northborough and serve the whole town, from downtown to the neighborhoods off Church Street and the Assabet area.",
     ],
     local: [
-      "Northborough's housing mixes antique colonials near the center with mid-century capes and newer vinyl-sided homes in the subdivisions. Older wood and cedar exteriors call for a gentle soft wash; newer vinyl benefits from a yearly maintenance clean to keep algae from taking hold.",
-      "Homes near the orchards, the Assabet River and the town's many wooded, shaded streets see heavier roof algae and green north walls. We clean houses, roofs, decks and concrete throughout town, always matching the pressure and solution to the surface.",
+      "Northborough's housing mixes antique colonials near the center with mid-century capes and newer vinyl-sided homes in the subdivisions. Older wood and cedar exteriors call for a gentle soft wash; newer vinyl benefits from a yearly maintenance clean to keep algae from taking hold. Homes near the orchards, the Assabet River and the town's many wooded, shaded streets see heavier roof algae and green north walls, which makes roof cleaning and house soft washing our most-requested Northborough pressure washing services.",
+      "The apple country around town is beautiful, but it means damp, shaded, tree-heavy lots — perfect conditions for the black roof streaks and green siding we specialize in removing. We treat that growth at the root with a low-pressure soft wash so it stays gone, rather than just rinsing the surface and watching it come back within a season.",
+      "Beyond the house and roof, Northborough homes come with decks, walkways and concrete that weather in the shade. We clean and brighten decks and prep them for stain, clear moss off stone and concrete walkways, and restore driveways and patios with hot-water surface cleaning. It lets a homeowner take care of the whole exterior in one visit instead of chasing each problem separately.",
+      "Northborough's central location near the junction of Routes 20 and 135 and I-290 makes it an easy, regular stop on our route, so scheduling is straightforward and there's no big travel charge tacked on. From the neighborhoods around Ellsworth and Solomon Pond to the older homes near the common, we give every Northborough property the same careful, method-matched pressure washing — and an honest, up-front quote before we start.",
     ],
     faqs: [
       {
@@ -384,6 +445,10 @@ export const towns: Town[] = [
       {
         q: "How far is Northborough from your base?",
         a: "About 25 minutes southeast of Holden and part of our regular route. Call (508) 736-0089 for a free quote.",
+      },
+      {
+        q: "Can you clean the deck and walkways at the same visit?",
+        a: "Yes. Most Northborough pressure washing jobs cover more than the house — we can clean and brighten the deck, clear moss off walkways, and restore the driveway or patio in the same visit.",
       },
     ],
   },
@@ -402,8 +467,10 @@ export const towns: Town[] = [
       "We serve all of Southborough, from Fayville to the estate roads, about 30 minutes from our Holden base.",
     ],
     local: [
-      "Southborough's larger custom and estate homes often feature premium siding, brick, stone and elaborate hardscaping — surfaces that demand a knowledgeable, careful hand. We soft wash siding and clean masonry, stone patios, pool decks and long driveways with the right pressure and solution for each, protecting finishes, plantings and joints.",
-      "The town's wooded, spacious lots and horse-country properties see plenty of roof algae, mossy walkways and weathered decks and fences. We treat all of it gently and thoroughly, with eco-friendly solutions safe for extensive landscaping, gardens and animals.",
+      "Southborough's larger custom and estate homes often feature premium siding, brick, stone and elaborate hardscaping — surfaces that demand a knowledgeable, careful hand. We soft wash siding and clean masonry, stone patios, pool decks and long driveways with the right pressure and solution for each, protecting finishes, plantings and joints. On homes of this caliber, house soft washing and careful hardscape cleaning are the pressure washing services we're trusted with most in Southborough.",
+      "The town's wooded, spacious lots and horse-country properties see plenty of roof algae, mossy walkways and weathered decks and fences. We treat all of it gently and thoroughly: roofs soft washed to remove the black streaks and moss without touching the shingles, cedar and premium siding cleaned without a hint of high pressure, and stone and paver hardscaping restored to an even, finished look.",
+      "Careful work here also means careful stewardship. Southborough properties come with extensive gardens, mature landscaping and, on the horse farms, animals — so we use eco-friendly, biodegradable solutions, protect and rinse plantings before and after, and control every application to avoid overspray. It's the standard these estate grounds deserve, and it's how we've earned the trust of homeowners who don't accept anything less.",
+      "On a property of this size, timing and coordination matter as much as the cleaning itself. We're happy to work around landscapers, pool openings and events, and to phase a larger job so the grounds are never all torn up at once. Many Southborough homeowners put their pressure washing on a standing schedule — a spring house and hardscape wash, a fall gutter and deck cleanup — so the estate always looks its best without them having to think about it. It's the kind of reliable, no-hassle service the town's busy homeowners and property managers count on year after year.",
     ],
     faqs: [
       {
@@ -417,6 +484,10 @@ export const towns: Town[] = [
       {
         q: "Is Southborough within your service area?",
         a: "Yes, it's about 30 minutes southeast of Holden. Call (508) 736-0089 for a free, no-obligation quote.",
+      },
+      {
+        q: "Can you clean stone patios, pool decks and long driveways?",
+        a: "Yes. Estate hardscaping is a big part of our Southborough pressure washing — we clean stone and paver patios, pool surrounds and long driveways at the correct pressure to protect the surface and joints.",
       },
     ],
   },
