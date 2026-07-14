@@ -24,7 +24,7 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={`py-14 sm:py-16 ${className}`}>
+    <section id={id} className={`py-10 sm:py-16 ${className}`}>
       <Container>{children}</Container>
     </section>
   );
@@ -41,9 +41,11 @@ export function SectionHeading({
   as?: "h2" | "h3";
 }) {
   return (
-    <div className="mx-auto mb-10 max-w-3xl text-center">
+    <div className="mx-auto mb-6 max-w-3xl text-center sm:mb-10">
       <Tag className="section-title">{title}</Tag>
-      {intro && <p className="mt-4 text-base leading-relaxed">{intro}</p>}
+      {intro && (
+        <p className="mt-3 text-sm leading-relaxed sm:mt-4 sm:text-base">{intro}</p>
+      )}
     </div>
   );
 }

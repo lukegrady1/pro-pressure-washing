@@ -33,7 +33,7 @@ export default function HomePage() {
       {/* Pro Services We Offer */}
       <Section>
         <SectionHeading title="Pro Services We Offer" intro={proServicesIntro} />
-        <div className="mb-10 text-center">
+        <div className="mb-6 text-center sm:mb-10">
           <Link href="/services/" className="btn">
             See All Services
           </Link>
@@ -53,7 +53,7 @@ export default function HomePage() {
           intro="Drag the slider on each photo to reveal the transformation. Real pressure washing results from jobs across Worcester County, MA."
         />
         <BeforeAfterShowcase pairs={featuredPairs} />
-        <div className="mt-10 text-center">
+        <div className="mt-6 text-center sm:mt-10">
           <Link href="/gallery/" className="btn">
             View Full Gallery
           </Link>

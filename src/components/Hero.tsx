@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-charcoal via-charcoal/75 to-transparent" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/45 via-transparent to-black/15" />
 
-      <div className="mx-auto flex min-h-[560px] w-full max-w-6xl flex-col items-start justify-center px-5 py-20 sm:min-h-[620px] sm:px-6">
+      <div className="mx-auto flex min-h-[440px] w-full max-w-6xl flex-col items-start justify-center px-5 py-12 sm:min-h-[620px] sm:px-6 sm:py-20">
         <div className="max-w-2xl [text-shadow:0_1px_10px_rgba(0,0,0,0.35)]">
           {/* Kicker with thin brand-red accent bar */}
           <div className="hero-rise flex items-center gap-3" style={{ animationDelay: "0.05s" }}>
@@ -34,15 +34,15 @@ export default function Hero() {
           </div>
 
           {/* H1 — full keyword string kept for SEO, split for visual hierarchy */}
-          <h1 className="mt-5 text-4xl font-bold leading-[1.1] text-white sm:text-5xl">
+          <h1 className="mt-4 text-3xl font-bold leading-[1.1] text-white sm:mt-5 sm:text-5xl">
             Pressure Washing &amp; Gutter Cleaning Service
-            <span className="mt-2 block text-2xl font-medium text-white/85 sm:text-3xl">
+            <span className="mt-1.5 block text-xl font-medium text-white/85 sm:mt-2 sm:text-3xl">
               in Holden &amp; Worcester County, MA
             </span>
           </h1>
 
           <p
-            className="hero-rise mt-6 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg"
+            className="hero-rise mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:mt-6 sm:text-lg"
             style={{ animationDelay: "0.15s" }}
           >
             Eco-friendly soft washing that safely restores your siding, roof,
@@ -51,7 +51,7 @@ export default function Hero() {
 
           {/* Actions */}
           <div
-            className="hero-rise mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
+            className="hero-rise mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-6"
             style={{ animationDelay: "0.25s" }}
           >
             <Link href="/contact-us/" className="btn">
@@ -69,7 +69,7 @@ export default function Hero() {
 
           {/* Trust row — modern pill chips */}
           <ul
-            className="hero-rise mt-10 flex flex-wrap items-center gap-3"
+            className="hero-rise mt-6 flex flex-wrap items-center gap-2 sm:mt-10 sm:gap-3"
             style={{ animationDelay: "0.35s" }}
           >
             {trustPoints.map((point) => (

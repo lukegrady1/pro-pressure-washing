@@ -15,17 +15,17 @@ export default function Testimonials({
   const current = items[index];
 
   return (
-    <div className="bg-neutral-100 py-16">
+    <div className="bg-neutral-100 py-10 sm:py-16">
       <div className="mx-auto w-full max-w-3xl px-5 sm:px-6">
         <SectionHeading title="Client Testimonials" />
-        <figure className="relative rounded-2xl bg-white px-7 py-9 text-center shadow-card sm:px-12 sm:py-11">
+        <figure className="relative rounded-2xl bg-white px-5 py-7 text-center shadow-card sm:px-12 sm:py-11">
           <span
             aria-hidden
             className="pointer-events-none absolute left-5 top-2 select-none font-[family-name:var(--font-heading)] text-7xl leading-none text-brand-red/15 sm:left-8 sm:text-8xl"
           >
             &ldquo;
           </span>
-          <blockquote className="relative text-lg italic leading-relaxed text-heading">
+          <blockquote className="relative text-base italic leading-relaxed text-heading sm:text-lg">
             “{current.quote}”
           </blockquote>
           <figcaption className="mt-5 font-bold text-brand-red">

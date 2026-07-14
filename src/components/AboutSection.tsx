@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <Section className="bg-neutral-50">
       <SectionHeading title="About Pro Pressure Washing" />
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
         <div className="overflow-hidden rounded-md">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -18,7 +18,7 @@ export default function AboutSection() {
         </div>
         <div>
           {aboutParagraphs.map((p, i) => (
-            <p key={i} className="mb-4 text-base leading-relaxed">
+            <p key={i} className="mb-3 text-sm leading-relaxed sm:mb-4 sm:text-base">
               {p}
             </p>
           ))}
