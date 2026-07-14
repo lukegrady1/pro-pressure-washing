@@ -81,6 +81,14 @@ export default function TownTemplate({ town }: { town: Town }) {
             </Link>
           ))}
         </div>
+        <div className="mt-6 text-center">
+          <Link
+            href="/services/"
+            className="text-sm font-bold uppercase tracking-wide text-brand-red hover:underline"
+          >
+            See all residential &amp; commercial services →
+          </Link>
+        </div>
       </Section>
 
       <Section>

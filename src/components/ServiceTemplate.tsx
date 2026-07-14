@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { CheckIcon, PhoneIcon } from "@/components/Icons";
 import { business } from "@/data/business";
 import { getServicePage, type ServicePage } from "@/data/services";
+import { towns } from "@/data/towns";
 import { breadcrumbSchema, serviceSchema, faqSchemaFrom } from "@/lib/schema";
 
 export default function ServiceTemplate({ service }: { service: ServicePage }) {
@@ -134,6 +135,33 @@ export default function ServiceTemplate({ service }: { service: ServicePage }) {
         <SectionHeading title="Frequently Asked Questions" />
         <div className="mx-auto max-w-3xl">
           <Accordion items={service.faqs} />
+        </div>
+      </Section>
+
+      {/* Areas we serve — links every service page to every town page */}
+      <Section className="bg-neutral-50">
+        <SectionHeading
+          title={`${service.navLabel} Across Worcester County`}
+          intro="We're based in Holden and serve homes and businesses throughout the region. Find your town:"
+        />
+        <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2">
+          {towns.map((t) => (
+            <Link
+              key={t.slug}
+              href={`/${t.slug}/`}
+              className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-heading shadow-sm transition-colors hover:border-brand-red hover:text-brand-red"
+            >
+              {t.name}
+            </Link>
+          ))}
+        </div>
+        <div className="mt-6 text-center">
+          <Link
+            href="/service-areas/"
+            className="text-sm font-bold uppercase tracking-wide text-brand-red hover:underline"
+          >
+            View all service areas →
+          </Link>
         </div>
       </Section>
 

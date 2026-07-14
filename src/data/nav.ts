@@ -30,4 +30,5 @@ export const footerNav: NavLink[] = [
   { label: "About Us", href: "/about/" },
   { label: "Contact Us", href: "/contact-us/" },
   { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms of Service", href: "/terms-of-service/" },
 ];
