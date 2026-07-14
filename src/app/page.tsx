@@ -17,7 +17,7 @@ import JsonLd from "@/components/JsonLd";
 import { faqs } from "@/data/faqs";
 import { featuredPairs } from "@/data/gallery";
 import { pageMeta } from "@/lib/seo";
-import { faqSchema } from "@/lib/schema";
+import { faqSchemaFrom } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
   title: "Pro Pressure Washing Service Holden Worcester Shrewsbury MA",
@@ -81,13 +81,13 @@ export default function HomePage() {
 
       {/* FAQs — embedded widget + FAQPage schema for Google & AI crawlers */}
       <Section className="bg-neutral-50">
-        <JsonLd data={faqSchema()} />
+        <JsonLd data={faqSchemaFrom(faqs.slice(0, 5))} />
         <SectionHeading
           title="Frequently Asked Questions"
           intro="Common questions about our pressure washing, gutter cleaning and exterior washing services in Holden, Worcester & Shrewsbury, MA."
         />
         <div className="mx-auto max-w-3xl">
-          <Accordion items={faqs} />
+          <Accordion items={faqs.slice(0, 5)} />
         </div>
         <div className="mt-6 text-center sm:mt-8">
           <Link href="/faq/" className="btn">
