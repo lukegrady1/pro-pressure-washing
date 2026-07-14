@@ -64,10 +64,10 @@ export default function QuoteForm({ variant = "quote" }: { variant?: Variant }) 
   }
 
   const inputClass =
-    "w-full rounded-sm border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-800 focus:border-brand-red focus:outline-none";
+    "w-full rounded-sm border border-neutral-300 bg-white px-3.5 py-2 text-sm text-neutral-800 focus:border-brand-red focus:outline-none sm:py-2.5";
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4">
+    <form onSubmit={onSubmit} className="space-y-3 sm:space-y-4">
       {/* Honeypot */}
       <div className="absolute -left-[9999px]" aria-hidden>
         <label>
@@ -76,7 +76,7 @@ export default function QuoteForm({ variant = "quote" }: { variant?: Variant }) 
         </label>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
         <div>
           <label htmlFor="name" className="mb-1 block text-sm font-semibold text-heading">
             Your Name <span className="text-brand-red">*</span>
