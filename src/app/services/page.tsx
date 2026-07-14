@@ -52,20 +52,22 @@ export default function ServicesPage() {
           title="Commercial Services"
           intro="Keep your business, building or community property looking its best — fully insured, on your schedule."
         />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-7 lg:grid-cols-3">
           {commercialServices.map((s) => (
             <Link
               key={s.slug}
               href={`/${s.slug}/`}
-              className="group flex flex-col justify-between gap-4 rounded-2xl border border-neutral-200 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+              className="group flex flex-col justify-between gap-3 rounded-2xl border border-neutral-200 bg-white p-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover sm:gap-4 sm:p-6"
             >
               <div>
-                <h3 className="text-lg text-heading group-hover:text-brand-red">
+                <h3 className="text-sm text-heading group-hover:text-brand-red sm:text-lg">
                   {s.navLabel}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed">{s.excerpt}</p>
+                <p className="mt-1.5 text-xs leading-relaxed sm:mt-2 sm:text-sm">
+                  {s.excerpt}
+                </p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-brand-red">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-red sm:text-sm">
                 Learn More <ArrowRightIcon width={16} height={16} />
               </span>
             </Link>
