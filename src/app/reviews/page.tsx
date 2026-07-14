@@ -3,10 +3,10 @@ import PageHeader from "@/components/PageHeader";
 import { Section, SectionHeading } from "@/components/Section";
 import CtaStrip from "@/components/CtaStrip";
 import QuoteSection from "@/components/QuoteSection";
+import ReviewsWidget from "@/components/ReviewsWidget";
 import JsonLd from "@/components/JsonLd";
 import { StarIcon } from "@/components/Icons";
 import { business } from "@/data/business";
-import { testimonials } from "@/data/testimonials";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -52,28 +52,7 @@ export default function ReviewsPage() {
           </a>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {testimonials.map((t) => (
-            <figure
-              key={t.name + t.quote.slice(0, 12)}
-              className="flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-card"
-            >
-              <span className="flex gap-0.5 text-amber-400">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon key={i} width={16} height={16} fill="currentColor" stroke="none" />
-                ))}
-              </span>
-              <blockquote className="mt-3 flex-1 text-base italic leading-relaxed text-heading">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <figcaption className="mt-4 text-sm font-bold text-brand-red">
-                {t.name}
-                <span className="font-normal text-body-muted"> — {t.location}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        {/* TODO(client): add more named Google reviews here as they come in. */}
+        <ReviewsWidget />
       </Section>
 
       <CtaStrip
