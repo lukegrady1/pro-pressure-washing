@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-charcoal via-charcoal/75 to-transparent" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/45 via-transparent to-black/15" />
 
-      <div className="mx-auto flex min-h-[440px] w-full max-w-6xl flex-col items-start justify-center px-5 py-12 sm:min-h-[620px] sm:px-6 sm:py-20">
+      <div className="mx-auto flex min-h-[calc(100svh-101px)] w-full max-w-6xl flex-col items-start justify-center px-5 py-10 sm:min-h-[620px] sm:px-6 sm:py-20">
         <div className="max-w-2xl [text-shadow:0_1px_10px_rgba(0,0,0,0.35)]">
           {/* Kicker with thin brand-red accent bar */}
           <div className="hero-rise flex items-center gap-3" style={{ animationDelay: "0.05s" }}>
