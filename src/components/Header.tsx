@@ -30,7 +30,15 @@ export default function Header() {
       <TopBar />
       <div className="border-b border-neutral-200 bg-white shadow-sm">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-3 sm:px-6">
-          <Link href="/" onClick={scrollToTop} className="shrink-0" aria-label={`${business.name} — home`}>
+          <Link
+            href="/"
+            onClick={() => {
+              setMobileOpen(false);
+              scrollToTop();
+            }}
+            className="shrink-0"
+            aria-label={`${business.name} — home`}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={business.logo}
