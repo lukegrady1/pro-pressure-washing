@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { Section } from "@/components/Section";
-import Gallery from "@/components/Gallery";
+import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import CtaStrip from "@/components/CtaStrip";
 import JsonLd from "@/components/JsonLd";
 import { galleryPairs } from "@/data/gallery";
@@ -34,9 +34,9 @@ export default function GalleryPage() {
         <p className="mx-auto mb-10 max-w-3xl text-center text-base leading-relaxed">
           From house washing and deck restoration to moss, rust and graffiti
           removal, here&rsquo;s a look at what a professional clean can do.
-          Tap any photo to view it larger.
+          Drag the slider on each photo to reveal the transformation.
         </p>
-        <Gallery pairs={galleryPairs} />
+        <BeforeAfterShowcase pairs={galleryPairs} />
       </Section>
 
       <CtaStrip
