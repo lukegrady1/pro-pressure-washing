@@ -51,15 +51,15 @@ export default function ServiceAreasPage() {
 
       <Section className="bg-neutral-50 pt-0">
         <SectionHeading title="Towns We Serve" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
           {towns.map((t) => (
             <Link
               key={t.slug}
               href={`/${t.slug}/`}
-              className="group flex items-center gap-3 rounded-2xl border border-neutral-200 bg-white px-5 py-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+              className="group flex items-center gap-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover sm:gap-3 sm:px-5 sm:py-4"
             >
               <MapPinIcon width={20} height={20} className="shrink-0 text-brand-red" />
-              <span className="font-semibold text-heading group-hover:text-brand-red">
+              <span className="text-sm font-semibold text-heading group-hover:text-brand-red sm:text-base">
                 {t.name}, MA
               </span>
             </Link>
@@ -76,12 +76,12 @@ export default function ServiceAreasPage() {
           title="What We Clean"
           intro="Every service is available across our entire service area."
         />
-        <div className="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-3">
           {[...residentialServices, ...commercialServices].map((s) => (
             <Link
               key={s.slug}
               href={`/${s.slug}/`}
-              className="group flex items-center justify-between gap-3 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm shadow-sm transition-colors hover:border-brand-red"
+              className="group flex items-center justify-between gap-2 rounded-xl border border-neutral-200 bg-white px-3 py-3 text-sm shadow-sm transition-colors hover:border-brand-red sm:gap-3 sm:px-4"
             >
               <span className="font-medium text-heading group-hover:text-brand-red">
                 {s.navLabel}
