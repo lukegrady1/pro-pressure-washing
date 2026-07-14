@@ -43,7 +43,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "Residential Soft Washing",
     excerpt:
       "Low-pressure soft washing that safely strips mold, mildew, algae and pollen from vinyl, aluminum, cedar and Hardie siding — without forcing water behind it.",
-    image: "/images/2015/07/AFTER-House-Washing.jpg",
+    image: "/images/2015/07/AFTER-House-Washing.webp",
     imageAlt: "Freshly soft-washed house exterior in Worcester County, MA — Pro Pressure Washing",
     intro: [
       "The green and black streaks creeping across your siding aren't just dirt — they're living mold, mildew and algae feeding on the surface. Blasting them with high pressure drives water behind the siding and can etch the finish. Pro Pressure Washing does house washing across Worcester the right way: a low-pressure soft wash that uses biodegradable cleaning solution to kill the growth at the root, then a gentle rinse that leaves your home genuinely clean.",
@@ -113,7 +113,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "The Gentle, Longer-Lasting Clean",
     excerpt:
       "A low-pressure cleaning method that uses specialized solutions — not brute force — to safely clean siding, roofs, and other surfaces that pressure washing can damage.",
-    image: "/images/2021/03/House-Washing-Pressure-Washing-Service-960x320.png",
+    image: "/images/2021/03/House-Washing-Pressure-Washing-Service-960x320.webp",
     imageAlt: "Soft washing a home exterior in Worcester, MA — Pro Pressure Washing",
     intro: [
       "Soft washing is the technique behind almost every safe exterior clean we do. Instead of relying on high pressure — which can gouge wood, crack vinyl, void roof warranties and force water where it shouldn't go — soft washing uses low pressure paired with biodegradable cleaning agents that dissolve mold, algae and grime chemically.",
@@ -183,7 +183,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "Black Streak & Moss Removal",
     excerpt:
       "Those black streaks are algae eating your shingles. We remove them safely with low-pressure soft washing that protects your roof's warranty and granules.",
-    image: "/images/2015/07/Huse-Pressure-Washing-Service-Holden-AFTER.jpg",
+    image: "/images/2015/07/Huse-Pressure-Washing-Service-Holden-AFTER.webp",
     imageAlt: "Home with a freshly cleaned roof in Worcester County, MA — Pro Pressure Washing",
     intro: [
       "The dark streaks running down New England roofs are a blue-green algae called Gloeocapsa magma, and the fuzzy green patches are moss holding moisture against your shingles. Left alone, both shorten the life of your roof. Our roof cleaning removes them with a soft-wash treatment that kills the growth without ever putting a pressure washer to your shingles.",
@@ -253,7 +253,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "Wood, Composite & Vinyl",
     excerpt:
       "We bring gray, slippery, algae-covered decks and fences back to life — cleaned at the right pressure for the material, and prepped perfectly for staining.",
-    image: "/images/2015/07/pressure-wash-deck-Holden-NEW.jpg",
+    image: "/images/2015/07/pressure-wash-deck-Holden-NEW.webp",
     imageAlt: "Freshly cleaned wood deck in Holden, MA — Pro Pressure Washing",
     intro: [
       "A deck takes a beating in New England — sun, snow, pollen and the constant damp that turns wood gray and grows a slick film of algae on the boards. Our deck cleaning brings wood, composite and vinyl decks and fences back to life, lifting off the gray, mildew and grime at the correct pressure for each material to reveal the surface underneath.",
@@ -323,7 +323,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "Concrete, Pavers & Masonry",
     excerpt:
       "Hot water, high pressure and non-toxic solutions lift oil, grease, dirt, moss and mildew out of concrete, patio pavers, walkways and masonry.",
-    image: "/images/2015/07/power-washing-concrete-stairs-in-Worcester.jpg",
+    image: "/images/2015/07/power-washing-concrete-stairs-in-Worcester.webp",
     imageAlt: "Concrete steps being pressure washed in Worcester, MA — Pro Pressure Washing",
     intro: [
       "Concrete and pavers are the surfaces where real pressure washing shines. Our driveway cleaning uses commercial hot-water equipment and surface cleaners to strip years of dirt, moss, oil, tire marks and mildew out of driveways, patios, walkways, pool decks and steps — leaving an even, streak-free finish instead of the zebra-striping a wand leaves behind.",
@@ -393,7 +393,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "Clear the Clogs, Kill the Stripes",
     excerpt:
       "We clear out clogged gutters so water flows where it should — and brighten the exterior of the gutters to remove those black 'tiger stripe' oxidation stains.",
-    image: "/images/2021/03/House-Washing-Pressure-Washing-Service-960x320.png",
+    image: "/images/2021/03/House-Washing-Pressure-Washing-Service-960x320.webp",
     imageAlt: "Home gutters cleaned and brightened in Worcester, MA — Pro Pressure Washing",
     intro: [
       "In New England, gutters fill fast — oak and maple leaves, pine needles, shingle grit and seed pods. Clogged gutters overflow, rot fascia boards, flood basements and grow the black streaks that run down the face of the gutter. Our gutter cleaning clears the clogs, and our brightening service removes those oxidation 'tiger stripes' the whole neighborhood can see.",
@@ -462,7 +462,7 @@ export const residentialServices: ServicePage[] = [
     kicker: "Interior & Exterior Glass",
     excerpt:
       "Streak-free windows inside and out — glass, screens, tracks and skylights — so your home or storefront lets in all the light it should.",
-    image: "/images/2015/07/After-power-washing-house-Leicester-MA-2.jpg",
+    image: "/images/2015/07/After-power-washing-house-Leicester-MA-2.webp",
     imageAlt: "Home with freshly cleaned windows in Worcester, MA — Pro Pressure Washing",
     intro: [
       "Clean windows change how a whole home or storefront feels — more light, a clearer view, and a finished look that a freshly washed house exterior deserves. Our window cleaning covers glass inside and out across Worcester and the surrounding towns, hand-detailing the glass and frames for a genuinely streak-free result, not a quick spray-and-rinse.",
@@ -541,7 +541,7 @@ export const commercialServices: ServicePage[] = [
     kicker: "For Businesses & Property Managers",
     excerpt:
       "Clean, well-kept exteriors bring customers in. We handle storefronts, buildings, sidewalks and lots for businesses across Worcester County — on your schedule.",
-    image: "/images/2025/02/Pro-Pressure-Washing-scaled.jpeg",
+    image: "/images/2025/02/Pro-Pressure-Washing-scaled.webp",
     imageAlt: "Pro Pressure Washing commercial service truck and equipment in Worcester County, MA",
     intro: [
       "A customer's first impression of your business is the exterior — the sidewalk they walk across, the entrance they walk through, the building they see from the road. Our commercial pressure washing keeps properties across Worcester County looking sharp, with fully insured service scheduled around your hours so we're never in your customers' way.",
@@ -618,7 +618,7 @@ export const commercialServices: ServicePage[] = [
     kicker: "Full-Facade Exterior Cleaning",
     excerpt:
       "From brick and block to metal panel, EIFS and vinyl, we soft wash commercial building exteriors to remove dirt, mold, algae and pollution staining.",
-    image: "/images/2025/02/Pro-Pressure-Washing-scaled.jpeg",
+    image: "/images/2025/02/Pro-Pressure-Washing-scaled.webp",
     imageAlt: "Commercial building exterior washing in Central MA — Pro Pressure Washing",
     intro: [
       "The exterior of your building takes years of weather, pollution and organic growth. Professional building washing removes the dirt, mold, algae and atmospheric staining that make a property look dated and neglected — and does it with methods matched to the facade so nothing gets damaged.",
@@ -694,7 +694,7 @@ export const commercialServices: ServicePage[] = [
     kicker: "First Impressions at the Front Door",
     excerpt:
       "Grimy sidewalks, gum spots and greasy entrances turn customers away. We keep your storefront and walkways clean, bright and safe to walk on.",
-    image: "/images/2015/07/power-washing-concrete-stairs-in-Worcester.jpg",
+    image: "/images/2015/07/power-washing-concrete-stairs-in-Worcester.webp",
     imageAlt: "Storefront sidewalk being pressure washed in Worcester, MA — Pro Pressure Washing",
     intro: [
       "The sidewalk and entrance in front of your business say a lot before a customer ever walks in. Spilled coffee, gum, grease tracked from a kitchen, salt residue and general city grime build up fast on a busy storefront. Our storefront cleaning keeps entrances and walkways clean and presentable with hot-water surface cleaning that lifts what a broom and hose can't.",
@@ -770,7 +770,7 @@ export const commercialServices: ServicePage[] = [
     kicker: "Community & Association Property",
     excerpt:
       "One insured vendor for the whole community — buildings, walkways, decks, fences and common areas cleaned on a schedule the board can budget around.",
-    image: "/images/2025/02/Pro-Pressure-Washing-scaled.jpeg",
+    image: "/images/2025/02/Pro-Pressure-Washing-scaled.webp",
     imageAlt: "Condo complex exterior washing in Worcester County, MA — Pro Pressure Washing",
     intro: [
       "Managing a condo association or HOA means keeping dozens of units looking consistent and cared-for, on a budget the board can plan around. Pro Pressure Washing works with property managers and boards across Worcester County to clean building exteriors, unit siding, shared walkways, decks, fences and common areas — with one point of contact and one clear quote.",
@@ -846,7 +846,7 @@ export const commercialServices: ServicePage[] = [
     kicker: "Trucks, Vans & Equipment",
     excerpt:
       "A clean fleet is rolling advertising. We wash trucks, vans, trailers and equipment on-site so your vehicles look professional and your branding stays sharp.",
-    image: "/images/2025/02/Pro-Pressure-Washing-scaled.jpeg",
+    image: "/images/2025/02/Pro-Pressure-Washing-scaled.webp",
     imageAlt: "Fleet vehicle washing in Central MA — Pro Pressure Washing",
     intro: [
       "Every vehicle in your fleet is a billboard for your business — and a dirty, road-salted truck sends the wrong message. Our fleet washing keeps trucks, vans, trailers and equipment clean and professional across Central Massachusetts, done on-site so your drivers never lose time at a wash bay.",
@@ -922,7 +922,7 @@ export const commercialServices: ServicePage[] = [
     kicker: "Fast, Clean Tag Removal",
     excerpt:
       "Graffiti attracts more graffiti — the faster it's gone, the better. We remove tags from brick, concrete, metal and storefronts quickly and cleanly.",
-    image: "/images/2015/07/power-washing-graffiti-removal-in-Worcester.jpg",
+    image: "/images/2015/07/power-washing-graffiti-removal-in-Worcester.webp",
     imageAlt: "Graffiti being removed from a wall in Worcester, MA — Pro Pressure Washing",
     intro: [
       "Graffiti is a magnet for more graffiti, so speed matters — the faster a tag comes down, the less likely it is to come back. Our graffiti removal clears tags from commercial and municipal surfaces across Worcester using hot water, specialized removers and the right technique for each surface, so the wall comes clean without being damaged.",

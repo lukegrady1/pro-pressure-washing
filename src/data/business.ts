@@ -45,11 +45,11 @@ export const business = {
     "Westborough",
     "Worcester",
   ],
-  logo: "/images/2023/02/Pro-Pressure-Washing-logo.png",
-  favicon: "/images/2020/03/cropped-favicon-270x270.png",
+  logo: "/images/2023/02/Pro-Pressure-Washing-logo.webp",
+  favicon: "/images/2020/03/cropped-favicon-270x270.webp",
   // Strong before/after used as the default social-share (OG) image.
   ogImage:
-    "/images/2021/03/Pressure-Washing-Service-House-Washing-Worcester-County-MA-960x320.jpeg",
+    "/images/2021/03/Pressure-Washing-Service-House-Washing-Worcester-County-MA-960x320.webp",
 } as const;
 
 export const fullAddress = `${business.address.street}, ${business.address.city}, ${business.address.state} ${business.address.zip}`;

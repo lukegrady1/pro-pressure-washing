@@ -31,7 +31,7 @@ export default function ServiceAreasPage() {
         title="Power Washing Service Areas"
         subtitle="Based in Holden and serving all of Worcester County, MA."
         crumbs={crumbs}
-        image="/images/2015/07/AFTER-House-Washing.jpg"
+        image="/images/2015/07/AFTER-House-Washing.webp"
       />
 
       <Section>

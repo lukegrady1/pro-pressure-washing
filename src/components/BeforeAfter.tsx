@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { asset } from "@/lib/asset";
 
 // Draggable before/after image-comparison slider. Uses pointer events with
 // pointer capture so a single press-and-drag works uniformly for mouse, touch
@@ -65,7 +66,7 @@ export default function BeforeAfter({
       {/* After (full) */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={after}
+        src={asset(after)}
         alt={afterAlt}
         loading="lazy"
         draggable={false}
@@ -78,7 +79,7 @@ export default function BeforeAfter({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={before}
+          src={asset(before)}
           alt={beforeAlt}
           loading="lazy"
           draggable={false}

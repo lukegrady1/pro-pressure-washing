@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { business } from "@/data/business";
+import { asset } from "@/lib/asset";
 import { ArrowRightIcon, CheckIcon, PhoneIcon, StarIcon } from "@/components/Icons";
 
 const trustPoints = ["Fully insured", "Family-owned", "Free estimates"];
@@ -13,7 +14,7 @@ export default function Hero() {
       {/* Background photo — real house-wash result (bright curb-appeal shot) */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/images/2015/07/After-power-washing-house-Leicester-MA-2.jpg"
+        src={asset("/images/2015/07/After-power-washing-house-Leicester-MA-2.webp")}
         alt="Freshly pressure-washed colonial home exterior in Worcester County, MA — Pro Pressure Washing"
         className="hero-zoom absolute inset-0 -z-10 h-full w-full object-cover object-center sm:object-[60%_center]"
         loading="eager"

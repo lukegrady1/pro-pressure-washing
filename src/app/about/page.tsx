@@ -7,6 +7,7 @@ import QuoteSection from "@/components/QuoteSection";
 import Testimonials from "@/components/Testimonials";
 import JsonLd from "@/components/JsonLd";
 import { aboutParagraphs, aboutImage } from "@/data/content";
+import { asset } from "@/lib/asset";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -37,7 +38,7 @@ export default function AboutPage() {
           <div className="overflow-hidden rounded-2xl shadow-card ring-1 ring-black/5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={aboutImage.src}
+              src={asset(aboutImage.src)}
               alt={aboutImage.alt}
               loading="lazy"
               className="h-full w-full object-cover"

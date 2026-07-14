@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { aboutParagraphs, aboutImage } from "@/data/content";
+import { asset } from "@/lib/asset";
 import { Section, SectionHeading } from "@/components/Section";
 
 export default function AboutSection() {
@@ -10,7 +11,7 @@ export default function AboutSection() {
         <div className="overflow-hidden rounded-md">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={aboutImage.src}
+            src={asset(aboutImage.src)}
             alt={aboutImage.alt}
             loading="lazy"
             className="h-full w-full object-cover"

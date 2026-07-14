@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { residentialServices, type ServicePage } from "@/data/services";
+import { asset } from "@/lib/asset";
 import { ArrowRightIcon } from "@/components/Icons";
 
 export function ServiceCard({ service }: { service: ServicePage }) {
@@ -10,7 +11,7 @@ export function ServiceCard({ service }: { service: ServicePage }) {
         <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={service.image}
+            src={asset(service.image)}
             alt={service.imageAlt}
             loading="lazy"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"

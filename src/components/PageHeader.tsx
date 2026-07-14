@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 
 export type Crumb = { name: string; path: string };
 
@@ -20,7 +21,7 @@ export default function PageHeader({
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={image}
+            src={asset(image)}
             alt=""
             aria-hidden
             className="absolute inset-0 h-full w-full object-cover opacity-25"

@@ -37,7 +37,7 @@ export default function TownTemplate({ town }: { town: Town }) {
         title={town.h1}
         subtitle={`House washing, roof cleaning, deck & concrete cleaning for ${town.name} homes and businesses.`}
         crumbs={crumbs}
-        image="/images/2015/07/AFTER-House-Washing.jpg"
+        image="/images/2015/07/AFTER-House-Washing.webp"
       />
 
       {/* Unique local content */}

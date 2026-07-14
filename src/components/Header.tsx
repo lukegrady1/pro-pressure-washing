@@ -8,6 +8,7 @@ import { primaryNav, residentialServiceNav } from "@/data/nav";
 import { ChevronDownIcon } from "@/components/Icons";
 import TopBar from "@/components/TopBar";
 import { scrollToTop } from "@/components/ScrollToTop";
+import { asset } from "@/lib/asset";
 
 // Shared underline-on-hover treatment for desktop nav links.
 const linkBase =
@@ -41,7 +42,7 @@ export default function Header() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={business.logo}
+              src={asset(business.logo)}
               alt={`${business.name} logo`}
               width={190}
               height={60}

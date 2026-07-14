@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import ScrollToTop from "@/components/ScrollToTop";
 import { localBusinessSchema } from "@/lib/schema";
+import { asset } from "@/lib/asset";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -31,8 +32,8 @@ export const metadata: Metadata = {
   description:
     "Top-rated, family-owned pressure washing and soft washing in Worcester County, MA. House, roof, deck, fence, patio & concrete cleaning. Free quotes — one call cleans it all.",
   icons: {
-    icon: business.favicon,
-    apple: business.favicon,
+    icon: asset(business.favicon),
+    apple: asset(business.favicon),
   },
   robots: { index: true, follow: true },
 };
