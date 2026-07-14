@@ -10,10 +10,11 @@ import AboutSection from "@/components/AboutSection";
 import QuoteSection from "@/components/QuoteSection";
 import WhyChoose from "@/components/WhyChoose";
 import Testimonials from "@/components/Testimonials";
-import FaqWidget from "@/components/FaqWidget";
+import Accordion from "@/components/Accordion";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import { LazyMap } from "@/components/LazyEmbed";
 import JsonLd from "@/components/JsonLd";
+import { faqs } from "@/data/faqs";
 import { featuredPairs } from "@/data/gallery";
 import { pageMeta } from "@/lib/seo";
 import { faqSchema } from "@/lib/schema";
@@ -85,7 +86,14 @@ export default function HomePage() {
           title="Frequently Asked Questions"
           intro="Common questions about our pressure washing, gutter cleaning and exterior washing services in Holden, Worcester & Shrewsbury, MA."
         />
-        <FaqWidget />
+        <div className="mx-auto max-w-3xl">
+          <Accordion items={faqs} />
+        </div>
+        <div className="mt-6 text-center sm:mt-8">
+          <Link href="/faq/" className="btn">
+            View All FAQs
+          </Link>
+        </div>
       </Section>
 
       {/* Map + closing */}
