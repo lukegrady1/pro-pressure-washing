@@ -97,12 +97,18 @@ export default function QuoteForm({ variant = "quote" }: { variant?: Variant }) 
         </div>
         <div>
           <label htmlFor="service" className="mb-1 block text-sm font-semibold text-heading">
-            {variant === "contact" ? "Subject" : "Service Needed"}
+            {variant === "contact" ? (
+              "Subject"
+            ) : (
+              <>
+                Service Needed <span className="text-brand-red">*</span>
+              </>
+            )}
           </label>
           {variant === "contact" ? (
             <input id="service" name="subject" className={inputClass} />
           ) : (
-            <select id="service" name="service" className={inputClass} defaultValue="">
+            <select id="service" name="service" required className={inputClass} defaultValue="">
               <option value="" disabled>
                 Choose one…
               </option>
