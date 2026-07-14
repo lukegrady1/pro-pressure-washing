@@ -8,10 +8,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-footer text-footer-text">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-5 py-10 sm:px-6 sm:py-14 lg:grid-cols-4">
         {/* About */}
-        <div>
-          <h2 className="mb-4 text-base font-bold uppercase tracking-wide text-white">
+        <div className="col-span-2 lg:col-span-1">
+          <h2 className="mb-3 text-base font-bold uppercase tracking-wide text-white">
             About Us
           </h2>
           <p className="text-sm leading-relaxed">
@@ -31,7 +31,7 @@ export default function Footer() {
 
         {/* Extra navigation */}
         <div>
-          <h2 className="mb-4 text-base font-bold uppercase tracking-wide text-white">
+          <h2 className="mb-3 text-base font-bold uppercase tracking-wide text-white">
             Extra Navigation
           </h2>
           <ul className="space-y-2 text-sm">
@@ -47,7 +47,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h2 className="mb-4 text-base font-bold uppercase tracking-wide text-white">
+          <h2 className="mb-3 text-base font-bold uppercase tracking-wide text-white">
             Our Services
           </h2>
           <ul className="space-y-2 text-sm">
@@ -61,21 +61,15 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Working hours */}
-        <div>
-          <h2 className="mb-4 text-base font-bold uppercase tracking-wide text-white">
+        {/* Working hours — condensed to a single line */}
+        <div className="col-span-2 lg:col-span-1">
+          <h2 className="mb-3 text-base font-bold uppercase tracking-wide text-white">
             Working Hours
           </h2>
-          <ul className="space-y-1 text-sm">
-            {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map(
-              (d) => (
-                <li key={d} className="flex justify-between">
-                  <span>{d}</span>
-                  <span className="font-semibold text-brand-red">OPEN</span>
-                </li>
-              )
-            )}
-          </ul>
+          <p className="text-sm leading-relaxed">
+            Open <span className="font-semibold text-brand-red">7 days a week</span>,
+            7 AM – 7 PM. Call anytime for a free quote.
+          </p>
         </div>
       </div>
 

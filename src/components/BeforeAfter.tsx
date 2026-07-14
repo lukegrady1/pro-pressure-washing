@@ -88,10 +88,10 @@ export default function BeforeAfter({
       </div>
 
       {/* Persistent corner labels */}
-      <span className="pointer-events-none absolute left-3 top-3 rounded bg-black/60 px-2 py-1 text-xs font-bold uppercase tracking-wide text-white">
+      <span className="pointer-events-none absolute left-2 top-2 rounded bg-black/60 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white sm:left-3 sm:top-3 sm:px-2 sm:py-1 sm:text-xs">
         Before
       </span>
-      <span className="pointer-events-none absolute right-3 top-3 rounded bg-brand-red px-2 py-1 text-xs font-bold uppercase tracking-wide text-white">
+      <span className="pointer-events-none absolute right-2 top-2 rounded bg-brand-red px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white sm:right-3 sm:top-3 sm:px-2 sm:py-1 sm:text-xs">
         After
       </span>
 
@@ -101,11 +101,11 @@ export default function BeforeAfter({
         style={{ left: `calc(${pos}% - 1px)` }}
       >
         <div
-          className={`ba-knob absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-red shadow-lg ring-1 ring-black/10 ${
+          className={`ba-knob absolute left-1/2 top-1/2 flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-red shadow-lg ring-1 ring-black/10 sm:h-11 sm:w-11 ${
             dragging ? "scale-105" : ""
           }`}
         >
-          <span aria-hidden className="text-lg leading-none">⇆</span>
+          <span aria-hidden className="text-sm leading-none sm:text-lg">⇆</span>
         </div>
       </div>
 

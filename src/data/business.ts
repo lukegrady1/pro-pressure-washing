@@ -21,7 +21,7 @@ export const business = {
     tel: "5087360089",
   },
   email: "clpropressurewashing@gmail.com",
-  hoursText: "Open Monday–Sunday",
+  hoursText: "Open 7 days a week, 7 AM – 7 PM",
   reviewsUrl:
     "https://search.google.com/local/reviews?placeid=ChIJE6yQ6Nv_44kRSP9Yvgw3rEY",
   // Google Business Profile rating (keep in sync with the live listing).

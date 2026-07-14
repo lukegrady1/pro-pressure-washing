@@ -43,8 +43,8 @@ export function localBusinessSchema() {
           "Saturday",
           "Sunday",
         ],
-        opens: "00:00",
-        closes: "23:59",
+        opens: "07:00",
+        closes: "19:00",
       },
     ],
     areaServed: business.serviceAreas.map((town) => ({

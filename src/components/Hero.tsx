@@ -82,18 +82,14 @@ export default function Hero() {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
 
-      {/* Floating Google rating card — elevated social proof (desktop) */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-8 hidden sm:block">
-        <div className="mx-auto flex w-full max-w-6xl justify-end px-6">
+          {/* Google rating card — inline on the left with the hero copy */}
           <a
             href={business.reviewsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-rise pointer-events-auto inline-flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-card ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
-            style={{ animationDelay: "0.5s" }}
+            className="hero-rise mt-6 inline-flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-card ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+            style={{ animationDelay: "0.45s" }}
           >
             <span className="flex gap-0.5 text-amber-400">
               {Array.from({ length: 5 }).map((_, i) => (
