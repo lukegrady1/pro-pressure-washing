@@ -91,6 +91,17 @@ export default function Footer() {
             © {year} {business.name}. All rights reserved.
           </p>
           <p>
+            Designed by{" "}
+            <a
+              href="https://gradydigital.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-brand-red"
+            >
+              Grady Digital
+            </a>
+          </p>
+          <p>
             For a free quote call{" "}
             <a
               href={`tel:${business.phone.tel}`}
