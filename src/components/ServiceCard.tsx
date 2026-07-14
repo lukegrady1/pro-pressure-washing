@@ -17,16 +17,19 @@ export function ServiceCard({ service }: { service: ServicePage }) {
           />
         </div>
       </Link>
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-lg text-heading">
+      {/* Compact on mobile (image + title); full card from sm up */}
+      <div className="flex flex-1 flex-col p-3 sm:p-5">
+        <h3 className="text-center text-sm text-heading sm:text-left sm:text-lg">
           <Link href={href} className="hover:text-brand-red">
             {service.navLabel}
           </Link>
         </h3>
-        <p className="mt-3 flex-1 text-sm leading-relaxed">{service.excerpt}</p>
+        <p className="mt-3 hidden flex-1 text-sm leading-relaxed sm:block">
+          {service.excerpt}
+        </p>
         <Link
           href={href}
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-brand-red hover:gap-2.5"
+          className="mt-5 hidden items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-brand-red hover:gap-2.5 sm:inline-flex"
         >
           Read More <ArrowRightIcon width={16} height={16} />
         </Link>
@@ -35,10 +38,11 @@ export function ServiceCard({ service }: { service: ServicePage }) {
   );
 }
 
-// Homepage grid shows the six residential services.
+// Homepage grid shows the six residential services — 2-up and compact on
+// mobile, 3-up on desktop.
 export function ServicesGrid() {
   return (
-    <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-2 gap-3 sm:gap-7 lg:grid-cols-3">
       {residentialServices.map((s) => (
         <ServiceCard key={s.slug} service={s} />
       ))}

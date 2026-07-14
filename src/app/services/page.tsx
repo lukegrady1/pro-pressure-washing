@@ -40,7 +40,7 @@ export default function ServicesPage() {
           title="Residential Services"
           intro="Safe, effective cleaning for every part of your home's exterior."
         />
-        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-7 lg:grid-cols-3">
           {residentialServices.map((s) => (
             <ServiceCard key={s.slug} service={s} />
           ))}
