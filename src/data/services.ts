@@ -113,10 +113,11 @@ export const residentialServices: ServicePage[] = [
     kicker: "The Gentle, Longer-Lasting Clean",
     excerpt:
       "A low-pressure cleaning method that uses specialized solutions — not brute force — to safely clean siding, roofs, and other surfaces that pressure washing can damage.",
-    image: "/images/2021/03/House-Washing-Pressure-Washing-Service-960x320.webp",
-    imageAlt: "Soft washing a home exterior in Worcester, MA — Pro Pressure Washing",
+    image: "/images/work/after-lichen-removal-vinyl-siding-worcester-county-ma.webp",
+    imageAlt:
+      "Vinyl siding in Worcester County, MA after lichen removal by soft washing — Pro Pressure Washing",
     intro: [
-      "Soft washing is the technique behind almost every safe exterior clean we do. Instead of relying on high pressure — which can gouge wood, crack vinyl, void roof warranties and force water where it shouldn't go — soft washing uses low pressure paired with biodegradable cleaning agents that dissolve mold, algae and grime chemically.",
+      "Soft washing is the technique behind almost every safe exterior clean we do. Instead of relying on high pressure — which can gouge wood, crack vinyl, void roof warranties and force water where it shouldn't go — soft washing uses low pressure paired with biodegradable cleaning agents that dissolve mold, algae, lichen and grime chemically.",
       "It's the method the manufacturers of asphalt shingles and vinyl siding actually recommend, and it's what Pro Pressure Washing uses on homes across Worcester and Worcester County every day. If a surface can be scratched, faded or forced apart by water pressure, soft washing is the answer.",
     ],
     sections: [
@@ -131,6 +132,14 @@ export const residentialServices: ServicePage[] = [
         h2: "Where we use soft washing",
         body: [
           "Vinyl, cedar, aluminum and Hardie siding; asphalt and cedar roofs; screened porches and vinyl fencing; stucco and EIFS; awnings, soffits and eaves; and any painted or coated surface. On the shaded, humid lots throughout Worcester County, these surfaces green up fast, and soft washing is the safe way to bring them back.",
+        ],
+      },
+      {
+        h2: "Moss, algae and lichen removal",
+        body: [
+          "Three different things grow on a New England house, and they don't come off the same way. Green algae is a film — it covers a whole wall and it's what most people mean by a 'dirty' house. Moss is the clumpy growth that takes hold where a surface stays damp: north walls, shaded roof slopes, the joints in a walkway. Lichen is the one homeowners ask about most, usually without knowing its name — the flat, crusty grey-green patches that look almost painted onto siding, stone or shingles.",
+          "Lichen is the stubborn one. It anchors itself into the surface rather than sitting on top of it, which is why scrubbing does nothing and why people assume the siding is stained for good. It isn't. The right solution and enough dwell time break its grip so it releases with a gentle rinse — no scraping, no gouged vinyl. The one thing that genuinely doesn't work is a pressure washer: enough force to move lichen is more than enough force to wreck the siding underneath it.",
+          "Because soft washing treats the growth at the root instead of knocking the top off, moss, algae and lichen all stay gone far longer than a rinse would leave them.",
         ],
       },
       {
@@ -151,6 +160,10 @@ export const residentialServices: ServicePage[] = [
       {
         q: "Is soft washing safe for my roof?",
         a: "Yes — it's the only method roofing manufacturers approve. High pressure strips the protective granules off asphalt shingles; soft washing removes the black algae (Gloeocapsa magma) with solution and a gentle rinse, protecting your warranty.",
+      },
+      {
+        q: "What are the crusty grey-green patches on my siding, and will they come off?",
+        a: "That's lichen, and yes it comes off. It's a fungus and an alga growing together, and unlike ordinary green algae it anchors into the surface rather than resting on it — which is why scrubbing accomplishes nothing and why homeowners often assume the siding is permanently stained. It isn't. The right solution with enough dwell time breaks its grip so it rinses away without scraping. What we won't do is try to blast it off: the pressure needed to shift lichen would damage the siding underneath it.",
       },
       {
         q: "What chemicals do you use for soft washing?",
@@ -294,7 +307,7 @@ export const residentialServices: ServicePage[] = [
       },
       {
         q: "Do you stain or seal decks too?",
-        a: "We specialize in the cleaning and prep, and can clean and brighten the wood so it's ready for stain. TODO(client): confirm whether staining/sealing is offered in-house or referred out.",
+        a: "We specialize in the cleaning and prep, and can clean and brighten the wood so it's ready for stain. If you'd like the staining or sealing handled as well, give us a call and we'll let you know what we can take on.",
       },
       {
         q: "My deck is gray — can it look new again?",
@@ -318,13 +331,14 @@ export const residentialServices: ServicePage[] = [
     keyword: "driveway cleaning Worcester MA",
     title: "Driveway & Patio Cleaning Worcester MA",
     metaDescription:
-      "Driveway, patio & concrete cleaning in Worcester, MA. We lift oil, dirt, moss & stains from concrete, pavers & masonry. Free quote: (508) 736-0089.",
+      "Driveway, patio & paver cleaning in Worcester, MA. We remove irrigation rust stains, moss, lichen & oil from concrete & pavers. Free quote: (508) 736-0089.",
     h1: "Driveway & Patio Cleaning in Worcester, MA",
     kicker: "Concrete, Pavers & Masonry",
     excerpt:
-      "Hot water, high pressure and non-toxic solutions lift oil, grease, dirt, moss and mildew out of concrete, patio pavers, walkways and masonry.",
-    image: "/images/2015/07/power-washing-concrete-stairs-in-Worcester.webp",
-    imageAlt: "Concrete steps being pressure washed in Worcester, MA — Pro Pressure Washing",
+      "Hot water, controlled pressure and non-toxic solutions lift oil, grease, dirt, moss, lichen and irrigation rust stains out of concrete, patio pavers, walkways and masonry.",
+    image: "/images/work/after-rust-removal-paver-patio-irrigation-stains-worcester-county-ma.webp",
+    imageAlt:
+      "Paver patio in Worcester County, MA after irrigation rust stain removal — Pro Pressure Washing",
     intro: [
       "Concrete and pavers are the surfaces where real pressure washing shines. Our driveway cleaning uses commercial hot-water equipment and surface cleaners to strip years of dirt, moss, oil, tire marks and mildew out of driveways, patios, walkways, pool decks and steps — leaving an even, streak-free finish instead of the zebra-striping a wand leaves behind.",
       "We clean poured concrete, stamped concrete, brick and paver patios, bluestone, and masonry across Worcester and Worcester County, matching the pressure and technique to the surface so it comes clean without getting damaged.",
@@ -341,6 +355,21 @@ export const residentialServices: ServicePage[] = [
         h2: "Tough stains we handle",
         body: [
           "Oil and transmission drips, rust, moss and algae in shaded walkways, efflorescence, leaf and berry staining, and the general gray film that builds up on north-facing concrete. Some deep, older oil stains lighten significantly rather than vanish completely — we'll always tell you honestly what to expect before we start, so there are no surprises.",
+        ],
+      },
+      {
+        h2: "Rust stain removal — including irrigation rust",
+        body: [
+          "If your paver walkway or patio has an orange-brown cast that washing never seems to touch, the culprit is almost always your irrigation system. Sprinkler heads throwing iron-rich well water across masonry leave the iron behind, and it oxidizes into the concrete and pavers. You'll usually see it as a fan or arc shape that mirrors the spray pattern, heaviest where the heads hit hardest.",
+          "This is the part most homeowners don't realize: rust is a chemical stain, not dirt. No amount of pressure or hot water will lift it, and turning the pressure up only chews the surface while the orange stays put. Rust needs a dedicated rust-removing treatment that dissolves the iron so it can be rinsed away — which is exactly what we use on paver patios, walkways, granite stepping stones and concrete across Worcester County.",
+          "We handle rust from other sources the same way: fertilizer with iron in it, metal furniture and planters left standing on a wet patio, and railing posts bleeding down concrete steps. If the irrigation heads are still hitting the hardscape, we'll point that out while we're there — otherwise the stain will simply come back next season.",
+        ],
+      },
+      {
+        h2: "Moss and lichen removal",
+        body: [
+          "Shaded, damp hardscape in New England grows moss in the joints, and once it takes hold it lifts the joint sand, holds water against the pavers and turns a walkway slick. We treat the growth rather than blast it out — a soft-wash solution kills the moss at the root so it releases, instead of high pressure that scours paver faces and strips the joints. On the walkways we clean, the pavers underneath are often several shades brighter than the homeowner remembers.",
+          "Lichen is the tougher relative: the flat, crusty grey-green patches you'll find bonded onto bluestone, fieldstone and older concrete. It grips far harder than moss and doesn't rinse off, so it needs a proper dwell time with the right solution to break its hold. We remove lichen from bluestone walkways, stone walls and steps without the pitting and scarring that pressure alone would leave in the stone.",
         ],
       },
       {
@@ -367,8 +396,16 @@ export const residentialServices: ServicePage[] = [
         a: "Not when it's done correctly. We use controlled pressure to protect the surface and joints, and we can re-sand the joints afterward so your patio looks and performs like new.",
       },
       {
+        q: "What causes the orange rust stains on my pavers, and can you remove them?",
+        a: "Nine times out of ten it's the irrigation system. Sprinkler heads spraying iron-rich well water onto pavers leave iron behind, and it oxidizes into an orange-brown stain — usually in a fan shape that matches the spray pattern. Yes, we remove it. Rust is a chemical stain rather than dirt, so pressure alone won't touch it no matter how high you turn it up; it takes a dedicated rust-removing treatment that dissolves the iron so it rinses away. Worth knowing: if the heads still hit the hardscape, the staining will come back, so it's worth adjusting them once the pavers are clean.",
+      },
+      {
+        q: "Can you get moss and lichen out of the joints in my walkway?",
+        a: "Yes, and they're two different problems. Moss sits in the joints and lifts out once it's been treated at the root — we use a soft-wash solution rather than high pressure, which would scour the paver faces and blow out the joint sand. Lichen is the flat, crusty grey-green growth bonded onto stone, and it grips much harder; it needs the right solution and enough dwell time to break its hold. Both come off without damaging the surface when they're treated rather than blasted.",
+      },
+      {
         q: "Do you seal concrete or pavers after cleaning?",
-        a: "We offer sealing as an add-on. Sealing helps concrete and pavers resist stains and slows the regrowth of moss and algae. TODO(client): confirm sealing availability.",
+        a: "Sealing helps concrete and pavers resist stains and slows the regrowth of moss and algae. Ask us when we quote your job and we'll let you know whether sealing makes sense for your surface and whether we can take it on.",
       },
       {
         q: "How often should I have my driveway or patio cleaned?",
@@ -437,7 +474,7 @@ export const residentialServices: ServicePage[] = [
       },
       {
         q: "Do you install gutter guards?",
-        a: "Yes. If you're tired of clearing gutters every season, we can install gutter guards that block leaves and needles while letting water through, and we'll tell you honestly whether they make sense for your roof. TODO(client): confirm gutter-guard products.",
+        a: "Yes. If you're tired of clearing gutters every season, we can install gutter guards that block leaves and needles while letting water through, and we'll tell you honestly whether they make sense for your roof. We'll match the guard to your roof and tree cover, so ask us when we come out.",
       },
       {
         q: "Can clogged gutters really cause that much damage?",
@@ -846,8 +883,9 @@ export const commercialServices: ServicePage[] = [
     kicker: "Trucks, Vans & Equipment",
     excerpt:
       "A clean fleet is rolling advertising. We wash trucks, vans, trailers and equipment on-site so your vehicles look professional and your branding stays sharp.",
-    image: "/images/2025/02/Pro-Pressure-Washing-scaled.webp",
-    imageAlt: "Fleet vehicle washing in Central MA — Pro Pressure Washing",
+    image: "/images/work/after-fleet-washing-dump-truck-worcester-county-ma.webp",
+    imageAlt:
+      "Tri-axle dump truck cleaned and detailed by Pro Pressure Washing in Worcester County, MA",
     intro: [
       "Every vehicle in your fleet is a billboard for your business — and a dirty, road-salted truck sends the wrong message. Our fleet washing keeps trucks, vans, trailers and equipment clean and professional across Central Massachusetts, done on-site so your drivers never lose time at a wash bay.",
       "We come to your yard on a schedule that fits your operation — weekly, biweekly or monthly — and keep your branding looking crisp year-round, even through a salty New England winter.",
@@ -863,6 +901,13 @@ export const commercialServices: ServicePage[] = [
         h2: "Vehicles we wash",
         body: [
           "Box trucks and vans, pickups, trailers, dump bodies and more. We remove road salt, mud, brake dust and grime that corrode vehicle bodies and undercarriages and hide your logos and lettering, so your fleet looks as professional as the work you do.",
+        ],
+      },
+      {
+        h2: "Aluminum wheels and fuel tanks",
+        body: [
+          "Road film and brake dust dull polished aluminum until it goes flat and grey, and a regular wash won't bring it back — the oxidation has to be cut, not rinsed. We clean and polish aluminum wheels, rims and fuel tanks back to a mirror finish, which is usually the single most noticeable difference on a working truck. A tri-axle with bright wheels and a clean tank reads as a well-run operation before anyone looks at the paint.",
+          "It's worth doing for more than looks. Brake dust and road salt are corrosive, and leaving them baked onto aluminum through a New England winter pits the finish permanently. Cleaning it off on a regular schedule protects the metal underneath.",
         ],
       },
       {
@@ -905,7 +950,7 @@ export const commercialServices: ServicePage[] = [
       },
       {
         q: "How much does fleet washing cost?",
-        a: "Per-vehicle pricing drops with fleet size and frequency, so we quote based on your fleet. Fill out our quote form or call (508) 736-0089 for a fast, free quote. TODO(client): confirm fleet washing is currently offered.",
+        a: "Per-vehicle pricing drops with fleet size and frequency, so we quote based on your fleet. Fill out our quote form or call (508) 736-0089 for a fast, free quote.",
       },
     ],
     related: ["commercial-pressure-washing", "commercial-building-washing", "storefront-sidewalk-cleaning"],

@@ -1,0 +1,18 @@
+# Netlify build config.
+#
+# `publish` must be set explicitly. Netlify auto-detects Next.js and would
+# otherwise enable its Next.js Runtime and publish `.next/`, which assumes a
+# server. This app is `output: "export"` (see next.config.ts) — a fully static
+# build written to `out/`, with no server runtime. Publishing `out/` directly is
+# what makes the export work, and it is also what lets Netlify read
+# `public/_redirects` (copied to `out/_redirects`) as real 301s.
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Deliberately no NEXT_PUBLIC_BASE_PATH: the site is served from the root of
+  # clpropressurewashing.com, and canonicals/sitemap/schema are built from
+  # business.siteUrl. A base path here would put links and assets under a
+  # subpath while the canonicals still claimed the root domain.

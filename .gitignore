@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Raw screenshot originals (converted to WebP in public/images/work/).
+# Kept locally for re-encoding; never deployed or committed.
+/_source-photos/

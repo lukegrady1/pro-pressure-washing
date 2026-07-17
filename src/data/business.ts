@@ -12,9 +12,11 @@ export const business = {
     country: "US",
   },
   geo: {
-    // Holden, MA — from the existing LocalBusiness schema
-    latitude: 42.3529,
-    longitude: -71.8676,
+    // Holden, MA — matches the placemark in mapEmbedSrc below, which is what the
+    // Google Business Profile listing itself resolves to. Google cross-checks
+    // this against the listing, so keep the two in sync.
+    latitude: 42.3387086,
+    longitude: -71.8698308,
   },
   phone: {
     display: "(508) 736-0089",
@@ -24,6 +26,10 @@ export const business = {
   hoursText: "Open 7 days a week, 7 AM – 7 PM",
   reviewsUrl:
     "https://search.google.com/local/reviews?placeid=ChIJE6yQ6Nv_44kRSP9Yvgw3rEY",
+  // Canonical Google Maps listing. Used for schema `sameAs`, which is for
+  // authoritative identity pages — not the reviews query endpoint above.
+  mapsPlaceUrl:
+    "https://www.google.com/maps/place/?q=place_id:ChIJE6yQ6Nv_44kRSP9Yvgw3rEY",
   // Google Business Profile rating (keep in sync with the live listing).
   rating: 4.9,
   reviewCount: 64,
@@ -47,9 +53,15 @@ export const business = {
   ],
   logo: "/images/2023/02/Pro-Pressure-Washing-logo.webp",
   favicon: "/images/2020/03/cropped-favicon-270x270.webp",
-  // Strong before/after used as the default social-share (OG) image.
-  ogImage:
-    "/images/2021/03/Pressure-Washing-Service-House-Washing-Worcester-County-MA-960x320.webp",
+  // Default social-share (OG) image: logo + phone number, 1200x630.
+  // PNG rather than WebP on purpose — several scrapers (LinkedIn especially)
+  // still render WebP share cards unreliably.
+  ogImage: "/images/og-default.png",
+  // Real photo of completed work, 1200x900 (4:3) — used as the LocalBusiness
+  // `image` in schema, which Google expects to be an actual photo of the
+  // business or its work at 16:9, 4:3 or 1:1. The logo goes in `logo` above and
+  // the share card in `ogImage`; these three are deliberately not the same file.
+  schemaImage: "/images/2015/07/AFTER-House-Washing.webp",
 } as const;
 
 export const fullAddress = `${business.address.street}, ${business.address.city}, ${business.address.state} ${business.address.zip}`;

@@ -34,9 +34,9 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* H1 — full keyword string kept for SEO, split for visual hierarchy */}
+          {/* H1 — split across two lines for visual hierarchy */}
           <h1 className="mt-4 text-3xl font-bold leading-[1.1] text-white sm:mt-5 sm:text-5xl">
-            Pressure Washing &amp; Gutter Cleaning Service
+            Pressure Washing Service
             <span className="mt-1.5 block text-xl font-medium text-white/85 sm:mt-2 sm:text-3xl">
               in Holden &amp; Worcester County, MA
             </span>

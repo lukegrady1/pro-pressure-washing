@@ -20,6 +20,10 @@ export function pageMeta({
 }: PageMetaInput): Metadata {
   const url = path;
   const image = ogImage ?? business.ogImage;
+  // Only the default card has known dimensions (1200x630). Per-page images vary
+  // (service photos are 4:3), and declaring dimensions we haven't measured makes
+  // scrapers reserve the wrong box — omitting them lets the scraper measure.
+  const isDefaultImage = image === business.ogImage;
   return {
     // `absolute` opts out of the layout's "%s | Pro Pressure Washing" template
     // so each page renders exactly the title we specify.
@@ -32,7 +36,11 @@ export function pageMeta({
       description,
       url,
       siteName: business.name,
-      images: [{ url: image, width: 1200, height: 630, alt: title }],
+      images: [
+        isDefaultImage
+          ? { url: image, width: 1200, height: 630, alt: title }
+          : { url: image, alt: title },
+      ],
     },
     twitter: {
       card: "summary_large_image",

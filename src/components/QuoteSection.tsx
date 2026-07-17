@@ -10,7 +10,7 @@ export default function QuoteSection() {
         intro="Tell us about your project and we'll get right back to you with a free, honest quote."
       />
       <div className="mx-auto max-w-3xl rounded-md border border-neutral-200 bg-white p-4 shadow-sm sm:p-8">
-        <QuoteForm variant="quote" />
+        <QuoteForm />
       </div>
     </Section>
   );

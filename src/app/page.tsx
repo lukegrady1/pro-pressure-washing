@@ -13,11 +13,9 @@ import Testimonials from "@/components/Testimonials";
 import Accordion from "@/components/Accordion";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import { LazyMap } from "@/components/LazyEmbed";
-import JsonLd from "@/components/JsonLd";
 import { faqs } from "@/data/faqs";
 import { featuredPairs } from "@/data/gallery";
 import { pageMeta } from "@/lib/seo";
-import { faqSchemaFrom } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
   title: "Pro Pressure Washing Service Holden Worcester Shrewsbury MA",
@@ -79,9 +77,10 @@ export default function HomePage() {
 
       <Testimonials />
 
-      {/* FAQs — embedded widget + FAQPage schema for Google & AI crawlers */}
+      {/* FAQs — teaser for /faq/, which carries the FAQPage schema. Deliberately
+          no schema here: these 5 are a subset of the 9 on /faq/, and Google
+          disallows the same Q&A being marked up on more than one URL. */}
       <Section className="bg-neutral-50">
-        <JsonLd data={faqSchemaFrom(faqs.slice(0, 5))} />
         <SectionHeading
           title="Frequently Asked Questions"
           intro="Common questions about our pressure washing, gutter cleaning and exterior washing services in Holden, Worcester & Shrewsbury, MA."

@@ -11,7 +11,7 @@ export function localBusinessSchema() {
     "@type": "CleaningService",
     "@id": `${business.siteUrl}/#business`,
     name: business.name,
-    image: abs(business.ogImage),
+    image: abs(business.schemaImage),
     logo: abs(business.logo),
     url: business.siteUrl,
     telephone: business.phone.display,
@@ -51,7 +51,7 @@ export function localBusinessSchema() {
       "@type": "City",
       name: `${town}, MA`,
     })),
-    sameAs: [business.reviewsUrl],
+    sameAs: [business.mapsPlaceUrl],
   };
 }
 

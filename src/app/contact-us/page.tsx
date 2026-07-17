@@ -40,7 +40,7 @@ export default function ContactPage() {
               responsive and will get right back to you!
             </p>
             <div className="rounded-md border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
-              <QuoteForm variant="contact" />
+              <QuoteForm />
             </div>
           </div>
 
