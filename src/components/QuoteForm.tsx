@@ -1,4 +1,8 @@
+"use client";
+
+import { useSyncExternalStore } from "react";
 import Script from "next/script";
+import { business } from "@/data/business";
 
 // The quote/contact form is a GoHighLevel embed, hosted on the agency's
 // white-label domain (api.gradydigital.com). The form fields, spam protection,
@@ -14,7 +18,68 @@ const FORM_ID = "4sStOnSBmTjPXxfugvPo";
 const FORM_SRC = `https://api.gradydigital.com/widget/form/${FORM_ID}`;
 const EMBED_SCRIPT = "https://api.gradydigital.com/js/form_embed.js";
 
+// Region gate. The business only serves Worcester County, MA, and every spam
+// submission to date (SEO / lead-gen pitches) has come from a browser whose
+// timezone GHL records as Asia/*. The check uses the same signal GHL logs —
+// the browser's IANA timezone — so anything that would show up as "Asia/…"
+// in the GHL submissions table never gets the form at all. Visitors in these
+// zones see the phone number instead, so a genuine caller is never stranded.
+//
+// Add prefixes here to widen the block. "Asia/" covers India, Pakistan, the
+// Philippines, etc. Kolkata/Calcutta, Karachi and Manila are all under it.
+const BLOCKED_TZ_PREFIXES = ["Asia/"];
+
+function isBlockedTimezone(): boolean {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone ?? "";
+    return BLOCKED_TZ_PREFIXES.some((p) => tz.startsWith(p));
+  } catch {
+    // Old browsers with no Intl support: don't block a possible real lead.
+    return false;
+  }
+}
+
+// useSyncExternalStore with a null server snapshot: the server HTML and the
+// hydration render both see `null` (placeholder), then React re-renders with
+// the browser's real answer. No hydration mismatch, no setState-in-effect.
+const subscribeNoop = () => () => {};
+const getClientSnapshot = () => isBlockedTimezone();
+const getServerSnapshot = () => null;
+
 export default function QuoteForm() {
+  // Three states: null (server render + hydration), allowed, blocked.
+  const blocked = useSyncExternalStore<boolean | null>(
+    subscribeNoop,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
+
+  if (blocked === null) {
+    // Reserve the form's height so the page doesn't jump when it appears.
+    return <div style={{ minHeight: 877 }} aria-hidden />;
+  }
+
+  if (blocked) {
+    return (
+      <div className="rounded-md bg-neutral-50 p-6 text-center">
+        <p className="mb-2 text-lg font-bold text-heading">
+          Online quotes are for our local service area
+        </p>
+        <p className="text-sm text-body-muted">
+          We serve Worcester County, Massachusetts. If you&rsquo;re a local
+          customer, please call us at{" "}
+          <a
+            href={`tel:${business.phone.tel}`}
+            className="font-semibold text-brand-red hover:underline"
+          >
+            {business.phone.display}
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
       <iframe
