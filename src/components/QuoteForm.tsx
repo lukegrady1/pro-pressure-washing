@@ -18,21 +18,37 @@ const FORM_ID = "4sStOnSBmTjPXxfugvPo";
 const FORM_SRC = `https://api.gradydigital.com/widget/form/${FORM_ID}`;
 const EMBED_SCRIPT = "https://api.gradydigital.com/js/form_embed.js";
 
-// Region gate. The business only serves Worcester County, MA, and every spam
-// submission to date (SEO / lead-gen pitches) has come from a browser whose
-// timezone GHL records as Asia/*. The check uses the same signal GHL logs —
-// the browser's IANA timezone — so anything that would show up as "Asia/…"
-// in the GHL submissions table never gets the form at all. Visitors in these
-// zones see the phone number instead, so a genuine caller is never stranded.
+// Region gate. The business only serves Worcester County, MA, so the form is
+// shown only to browsers whose IANA timezone is US Eastern time. Every spam
+// submission to date (SEO / lead-gen / financing pitches) has come from a
+// browser outside it — Asia/* first, then America/Los_Angeles. The check uses
+// the same signal GHL logs, so anything that wouldn't show up as an Eastern
+// zone in the GHL submissions table never gets the form at all. Everyone else
+// sees the phone number instead, so a genuine caller is never stranded.
 //
-// Add prefixes here to widen the block. "Asia/" covers India, Pakistan, the
-// Philippines, etc. Kolkata/Calcutta, Karachi and Manila are all under it.
-const BLOCKED_TZ_PREFIXES = ["Asia/"];
+// Nearly every device in New England reports "America/New_York". The rest of
+// the list is the other Eastern-time zones a mis-set device might report.
+const ALLOWED_TIMEZONES = new Set([
+  "America/New_York",
+  "America/Detroit",
+  "America/Toronto",
+  "America/Montreal",
+  "America/Kentucky/Louisville",
+  "America/Kentucky/Monticello",
+  "America/Indiana/Indianapolis",
+  "America/Indianapolis",
+  "America/Fort_Wayne",
+  "US/Eastern",
+  "US/Michigan",
+  "US/East-Indiana",
+  "EST5EDT",
+  "EST",
+]);
 
 function isBlockedTimezone(): boolean {
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone ?? "";
-    return BLOCKED_TZ_PREFIXES.some((p) => tz.startsWith(p));
+    return !ALLOWED_TIMEZONES.has(tz);
   } catch {
     // Old browsers with no Intl support: don't block a possible real lead.
     return false;
