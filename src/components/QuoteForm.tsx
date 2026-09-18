@@ -19,31 +19,17 @@ const FORM_SRC = `https://api.gradydigital.com/widget/form/${FORM_ID}`;
 const EMBED_SCRIPT = "https://api.gradydigital.com/js/form_embed.js";
 
 // Region gate. The business only serves Worcester County, MA, so the form is
-// shown only to browsers whose IANA timezone is US Eastern time. Every spam
+// shown only to browsers whose IANA timezone is New York (US Eastern). Every spam
 // submission to date (SEO / lead-gen / financing pitches) has come from a
 // browser outside it — Asia/* first, then America/Los_Angeles. The check uses
 // the same signal GHL logs, so anything that wouldn't show up as an Eastern
 // zone in the GHL submissions table never gets the form at all. Everyone else
 // sees the phone number instead, so a genuine caller is never stranded.
 //
-// Nearly every device in New England reports "America/New_York". The rest of
-// the list is the other Eastern-time zones a mis-set device might report.
-const ALLOWED_TIMEZONES = new Set([
-  "America/New_York",
-  "America/Detroit",
-  "America/Toronto",
-  "America/Montreal",
-  "America/Kentucky/Louisville",
-  "America/Kentucky/Monticello",
-  "America/Indiana/Indianapolis",
-  "America/Indianapolis",
-  "America/Fort_Wayne",
-  "US/Eastern",
-  "US/Michigan",
-  "US/East-Indiana",
-  "EST5EDT",
-  "EST",
-]);
+// Every modern device in Massachusetts reports "America/New_York". "US/Eastern"
+// and "EST5EDT" are legacy aliases for the same zone that a few older systems
+// still use.
+const ALLOWED_TIMEZONES = new Set(["America/New_York", "US/Eastern", "EST5EDT"]);
 
 function isBlockedTimezone(): boolean {
   try {
