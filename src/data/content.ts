@@ -7,7 +7,7 @@ export const aboutParagraphs = [
 ];
 
 export const proServicesIntro =
-  "We provide exceptional pressure washing services to a wide range of commercial and residential properties using pressure washing and soft washing techniques with hot/cold water and eco friendly solutions. We take pride in being able to offer a wide range of services and satisfy all of our clients needs. Please feel free to browse our services and gallery and give us a call!";
+  "We provide exceptional pressure washing services to a wide range of commercial and residential properties using pressure washing and soft washing techniques with hot/cold water and eco friendly solutions. We take pride in being able to offer a wide range of services and satisfy all of our clients needs — and now that includes interior painting, so one call really can take care of the whole property. Please feel free to browse our services and gallery and give us a call!";
 
 export const aboutImage = {
   src: "/images/2025/02/Pro-Pressure-Washing-scaled.webp",

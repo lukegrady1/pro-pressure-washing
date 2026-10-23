@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { residentialServices, type ServicePage } from "@/data/services";
 import { asset } from "@/lib/asset";
-import { ArrowRightIcon } from "@/components/Icons";
+import { ArrowRightIcon, PaintRollerIcon } from "@/components/Icons";
 
 export function ServiceCard({ service }: { service: ServicePage }) {
   const href = `/${service.slug}/`;
@@ -9,13 +9,20 @@ export function ServiceCard({ service }: { service: ServicePage }) {
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover">
       <Link href={href} className="block overflow-hidden">
         <div className="aspect-[4/3] w-full overflow-hidden bg-neutral-100">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={asset(service.image)}
-            alt={service.imageAlt}
-            loading="lazy"
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
+          {service.image ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={asset(service.image)}
+              alt={service.imageAlt ?? service.navLabel}
+              loading="lazy"
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          ) : (
+            // No photo yet for this service — neutral panel keeps the grid aligned.
+            <div className="flex h-full w-full items-center justify-center bg-charcoal">
+              <PaintRollerIcon width={48} height={48} className="text-white/60" />
+            </div>
+          )}
         </div>
       </Link>
       {/* Compact on mobile (image + title); full card from sm up */}
@@ -39,7 +46,7 @@ export function ServiceCard({ service }: { service: ServicePage }) {
   );
 }
 
-// Homepage grid shows the six residential services — 2-up and compact on
+// Homepage grid shows the residential services — 2-up and compact on
 // mobile, 3-up on desktop.
 export function ServicesGrid() {
   return (

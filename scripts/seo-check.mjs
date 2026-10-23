@@ -81,7 +81,10 @@ function coreKeyword(keyword, townName) {
 
 // ---- collect pages from data ----------------------------------------------
 const pages = [];
-const servicesSrc = readFileSync(join(ROOT, "src/data/services.ts"), "utf8");
+const servicesSrc = [
+  readFileSync(join(ROOT, "src/data/services.ts"), "utf8"),
+  readFileSync(join(ROOT, "src/data/serviceTowns.ts"), "utf8"), // service-in-town pages
+].join("\n");
 for (const obj of topLevelObjects(servicesSrc)) {
   const slug = field(obj, "slug");
   if (!slug) continue;
@@ -91,8 +94,15 @@ for (const obj of topLevelObjects(servicesSrc)) {
     ...arrayStrings(obj, "benefits"), ...arrayStrings(obj, "faqs"),
     field(obj, "pricingNote"),
   ];
+  // Service-in-town pages carry a townSlug ("pressure-washing-west-boylston-ma");
+  // derive the town name so the keyword check strips it like a town page does.
+  const townSlug = field(obj, "townSlug");
+  const townName = townSlug
+    ? townSlug.replace(/^pressure-washing-/, "").replace(/-ma$/, "").split("-")
+        .map((w) => w[0].toUpperCase() + w.slice(1)).join(" ")
+    : undefined;
   pages.push({
-    type: "service", slug,
+    type: "service", slug, name: townName,
     title: field(obj, "title"), meta: field(obj, "metaDescription"),
     h1: field(obj, "h1"), keyword: field(obj, "keyword"),
     body: bodyParts.join(" "),

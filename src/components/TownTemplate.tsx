@@ -10,6 +10,7 @@ import JsonLd from "@/components/JsonLd";
 import { ArrowRightIcon, MapPinIcon } from "@/components/Icons";
 import { business } from "@/data/business";
 import { residentialServices } from "@/data/services";
+import { findServiceTownPage } from "@/data/serviceTowns";
 import { type Town } from "@/data/towns";
 import { breadcrumbSchema, serviceSchema, faqSchemaFrom } from "@/lib/schema";
 
@@ -65,21 +66,25 @@ export default function TownTemplate({ town }: { town: Town }) {
       <Section className="bg-neutral-50">
         <SectionHeading
           title={`Our Services in ${town.name}`}
-          intro="One call cleans it all — here's what we clean for your home or business."
+          intro="One call cleans it all — here's what we do for your home or business."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {residentialServices.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/${s.slug}/`}
-              className="group flex items-center justify-between gap-3 rounded-2xl border border-neutral-200 bg-white px-5 py-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
-            >
-              <span className="font-semibold text-heading group-hover:text-brand-red">
-                {s.navLabel}
-              </span>
-              <ArrowRightIcon width={18} height={18} className="shrink-0 text-brand-red" />
-            </Link>
-          ))}
+          {residentialServices.map((s) => {
+            // Prefer the dedicated "this service in this town" page when we have one.
+            const dedicated = findServiceTownPage(s.slug, town.slug);
+            return (
+              <Link
+                key={s.slug}
+                href={`/${dedicated ? dedicated.slug : s.slug}/`}
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-neutral-200 bg-white px-5 py-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+              >
+                <span className="font-semibold text-heading group-hover:text-brand-red">
+                  {dedicated ? `${s.navLabel} in ${town.name}` : s.navLabel}
+                </span>
+                <ArrowRightIcon width={18} height={18} className="shrink-0 text-brand-red" />
+              </Link>
+            );
+          })}
         </div>
         <div className="mt-6 text-center">
           <Link

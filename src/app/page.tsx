@@ -78,12 +78,12 @@ export default function HomePage() {
       <Testimonials />
 
       {/* FAQs — teaser for /faq/, which carries the FAQPage schema. Deliberately
-          no schema here: these 5 are a subset of the 9 on /faq/, and Google
+          no schema here: these 5 are a subset of the 10 on /faq/, and Google
           disallows the same Q&A being marked up on more than one URL. */}
       <Section className="bg-neutral-50">
         <SectionHeading
           title="Frequently Asked Questions"
-          intro="Common questions about our pressure washing, gutter cleaning and exterior washing services in Holden, Worcester & Shrewsbury, MA."
+          intro="Common questions about our pressure washing, gutter cleaning, exterior washing and interior painting services in Holden, Worcester & Shrewsbury, MA."
         />
         <div className="mx-auto max-w-3xl">
           <Accordion items={faqs.slice(0, 5)} />

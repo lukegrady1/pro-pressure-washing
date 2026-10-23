@@ -1,14 +1,28 @@
 import { business, fullAddress } from "@/data/business";
 import { faqs } from "@/data/faqs";
+import { placeSameAs } from "@/data/places";
 
 const abs = (path: string) =>
   path.startsWith("http") ? path : `${business.siteUrl}${path}`;
 
-// Sitewide LocalBusiness (CleaningService) — rendered once in the root layout.
+// A City entity for `areaServed`, linked three ways (Wikipedia, Wikidata,
+// Google Knowledge Graph) so search engines resolve the exact town rather than
+// matching on the name alone. Towns without IDs fall back to name only.
+export function cityRef(townName: string) {
+  const sameAs = placeSameAs(townName);
+  return {
+    "@type": "City",
+    name: `${townName}, MA`,
+    ...(sameAs ? { sameAs } : {}),
+  };
+}
+
+// Sitewide LocalBusiness — rendered once in the root layout. Typed as both a
+// CleaningService and a HousePainter now that interior painting is offered.
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "CleaningService",
+    "@type": ["CleaningService", "HousePainter"],
     "@id": `${business.siteUrl}/#business`,
     name: business.name,
     image: abs(business.schemaImage),
@@ -47,10 +61,7 @@ export function localBusinessSchema() {
         closes: "19:00",
       },
     ],
-    areaServed: business.serviceAreas.map((town) => ({
-      "@type": "City",
-      name: `${town}, MA`,
-    })),
+    areaServed: business.serviceAreas.map(cityRef),
     sameAs: [business.mapsPlaceUrl],
   };
 }
@@ -71,8 +82,8 @@ export function serviceSchema(opts: {
     url: abs(opts.path),
     provider: { "@id": `${business.siteUrl}/#business` },
     areaServed: opts.areaName
-      ? { "@type": "City", name: `${opts.areaName}, MA` }
-      : business.serviceAreas.map((t) => ({ "@type": "City", name: `${t}, MA` })),
+      ? cityRef(opts.areaName)
+      : business.serviceAreas.map(cityRef),
   };
 }
 

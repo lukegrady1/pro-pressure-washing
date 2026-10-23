@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import { CheckIcon, PhoneIcon } from "@/components/Icons";
 import { business } from "@/data/business";
 import { getServicePage, type ServicePage } from "@/data/services";
+import { findServiceTownPage } from "@/data/serviceTowns";
 import { towns } from "@/data/towns";
 import { breadcrumbSchema, serviceSchema, faqSchemaFrom } from "@/lib/schema";
 
@@ -145,15 +146,19 @@ export default function ServiceTemplate({ service }: { service: ServicePage }) {
           intro="We're based in Holden and serve homes and businesses throughout the region. Find your town:"
         />
         <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-2">
-          {towns.map((t) => (
-            <Link
-              key={t.slug}
-              href={`/${t.slug}/`}
-              className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-heading shadow-sm transition-colors hover:border-brand-red hover:text-brand-red"
-            >
-              {t.name}
-            </Link>
-          ))}
+          {towns.map((t) => {
+            // Prefer the dedicated "this service in this town" page when we have one.
+            const dedicated = findServiceTownPage(service.slug, t.slug);
+            return (
+              <Link
+                key={t.slug}
+                href={`/${dedicated ? dedicated.slug : t.slug}/`}
+                className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-heading shadow-sm transition-colors hover:border-brand-red hover:text-brand-red"
+              >
+                {t.name}
+              </Link>
+            );
+          })}
         </div>
         <div className="mt-6 text-center">
           <Link

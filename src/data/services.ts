@@ -21,8 +21,8 @@ export type ServicePage = {
   h1: string; // single H1, contains keyword
   kicker: string; // hero eyebrow
   excerpt: string; // card / hub blurb
-  image: string;
-  imageAlt: string;
+  image?: string; // omit while the client has no photo yet — cards show a placeholder, header goes plain
+  imageAlt?: string;
   intro: string[];
   sections: ServiceSection[];
   benefits: string[];
@@ -562,6 +562,93 @@ export const residentialServices: ServicePage[] = [
       },
     ],
     related: ["house-washing-worcester-ma", "gutter-cleaning-worcester-ma", "roof-cleaning-worcester-ma"],
+  },
+  {
+    slug: "interior-painting-worcester-ma",
+    category: "residential",
+    navLabel: "Interior Painting",
+    keyword: "interior painting Worcester MA",
+    title: "Interior Painting Worcester MA | Clean, Careful Work",
+    metaDescription:
+      "Professional interior painting in Worcester, MA. Walls, ceilings, trim & doors with careful prep, clean lines and no mess left behind. Call (508) 736-0089.",
+    h1: "Interior Painting in Worcester, MA",
+    kicker: "Residential Interior Painting",
+    excerpt:
+      "Fresh, even color on walls, ceilings, trim and doors — with the prep done right, clean lines, and your home left tidy when we're finished.",
+    image: "/images/work/interior-painting-supplies-sherwin-williams-worcester-county-ma.webp",
+    imageAlt: "Sherwin-Williams interior paint, brush, roller and tray ready for an interior painting job in Worcester County, MA — Pro Pressure Washing",
+    intro: [
+      "A fresh coat of paint is the fastest way to make a room feel new again, and it's the one home update where the prep matters more than the paint. Our interior painting covers walls, ceilings, trim, doors and closets for homes across Worcester and the surrounding towns, with the patching, sanding and masking done properly before any color goes on, so the finish looks smooth and stays that way.",
+      "Pro Pressure Washing customers already trust us on the outside of their homes. Interior painting lets us take care of the inside with the same care, honesty and clean, no-surprises approach — one call for the whole property.",
+    ],
+    sections: [
+      {
+        h2: "What we paint",
+        body: [
+          "Living rooms, bedrooms, kitchens, bathrooms, hallways and stairwells; ceilings; baseboards, window and door casings and crown molding; interior doors and closets; and finished basements. Whether it's a single accent wall, one room before guests arrive, or a whole-house repaint before you move in or list the home, our interior painting is scoped to exactly what you need — no more, no less.",
+        ],
+      },
+      {
+        h2: "Prep is most of the job",
+        body: [
+          "The difference between a paint job that looks great on day one and one that still looks great years later is almost entirely preparation. We fill nail holes and dings, repair small cracks and drywall blemishes, sand rough spots smooth, caulk gaps along trim, and prime where it's needed — bare patches, stains, or a big color change. Then we mask trim, outlets and fixtures and cover floors and furniture so the only thing that gets paint is the surface that's supposed to.",
+        ],
+      },
+      {
+        h2: "Clean lines and even color",
+        body: [
+          "We cut in by hand along ceilings, trim and corners for crisp, straight lines, then roll walls in consistent coats so the color lays down evenly without lap marks, drips or thin spots. Where the job calls for it we apply two full coats, because a single coat over a darker color or patched drywall almost always shows through once the light hits it. The result is the smooth, uniform finish you expect from a professional, not a touched-up look.",
+        ],
+      },
+      {
+        h2: "Quality paint, honest advice",
+        body: [
+          "We use quality, low-odor paints from brands you'd recognize, in the sheen that fits the room: flat or matte for ceilings and low-traffic walls, eggshell or satin for living areas, hallways and kids' rooms that need to be wiped down, and semi-gloss for trim, doors, kitchens and bathrooms. If you're not sure about a color or finish, we'll give you straightforward advice — we'd rather you love the result than repaint it in a year.",
+          "Pricing is simple and up front. We'll look at the rooms, the condition of the walls and the amount of trim, and give you a clear quote before any work starts — the same no-pressure approach we take with every service.",
+        ],
+      },
+      {
+        h2: "Respect for your home",
+        body: [
+          "Interior painting means we're working inside your living space, and we treat it that way. We show up on time, move and cover furniture, keep the work area contained, clean up at the end of every day, and put the room back together when we're done. You get a freshly painted room, not a mess to deal with afterward.",
+        ],
+      },
+    ],
+    benefits: [
+      "Thorough prep: patching, sanding, caulking and priming",
+      "Hand-cut lines and smooth, even coats",
+      "Walls, ceilings, trim, doors and closets",
+      "Quality low-odor paints in the right sheen",
+      "Furniture and floors protected, rooms cleaned up daily",
+      "Clear, honest quote before work starts",
+    ],
+    faqs: [
+      {
+        q: "Do I need to move my furniture before you arrive?",
+        a: "No. We'll move furniture toward the center of the room and cover it, along with the floors, before we start. If there are small or fragile items you'd rather handle yourself, clearing those ahead of time is a help, but the heavy lifting is on us.",
+      },
+      {
+        q: "Can you fix nail holes, cracks and dings in the walls?",
+        a: "Yes. Filling nail holes, patching small cracks and dings, sanding and spot-priming are a standard part of our prep on every interior painting job. Larger drywall repairs can usually be handled too — just point them out when we quote the job.",
+      },
+      {
+        q: "How long does it take to paint a room?",
+        a: "A typical bedroom or living room takes about a day, including prep and two coats on the walls. Ceilings, lots of trim, or a big color change add time. Whole-house projects are scheduled room by room so your home stays livable throughout.",
+      },
+      {
+        q: "Do you help choose colors?",
+        a: "We're happy to. We can give you practical advice on colors and sheens that work for the light and use of each room, and we'll always tell you honestly if a choice is likely to need extra coats or show wear quickly.",
+      },
+      {
+        q: "Is the paint safe for kids and pets?",
+        a: "We use quality low-odor paints, and we keep the rooms ventilated while we work. Most rooms are ready to be used again the same evening once the paint has dried to the touch.",
+      },
+      {
+        q: "How much does interior painting cost?",
+        a: "It depends on the number of rooms, ceiling height, the amount of trim and how much prep the walls need, so we quote each home individually. Fill out our quick quote form or call (508) 736-0089 for a fast, free quote.",
+      },
+    ],
+    related: ["house-washing-worcester-ma", "window-cleaning-worcester-ma", "gutter-cleaning-worcester-ma"],
   },
 ];
 

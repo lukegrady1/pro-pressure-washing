@@ -14,9 +14,9 @@ import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Pressure Washing Services | Worcester County MA",
+  title: "Pressure Washing & Painting Services | Worcester MA",
   description:
-    "Residential and commercial pressure washing across Worcester County, MA — houses, roofs, decks, concrete, storefronts and more. Call (508) 736-0089.",
+    "Residential and commercial pressure washing plus interior painting in Worcester County, MA — houses, roofs, decks, concrete & more. Call (508) 736-0089.",
   path: "/services/",
 });
 
@@ -30,15 +30,15 @@ export default function ServicesPage() {
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <PageHeader
-        title="Our Pressure Washing Services"
-        subtitle="Residential and commercial exterior cleaning across Worcester County, MA."
+        title="Our Services"
+        subtitle="Residential and commercial exterior cleaning — plus interior painting — across Worcester County, MA."
         crumbs={crumbs}
       />
 
       <Section>
         <SectionHeading
           title="Residential Services"
-          intro="Safe, effective cleaning for every part of your home's exterior."
+          intro="Safe, effective cleaning for every part of your home's exterior — and a fresh coat of paint inside."
         />
         <div className="grid grid-cols-2 gap-3 sm:gap-7 lg:grid-cols-3">
           {residentialServices.map((s) => (

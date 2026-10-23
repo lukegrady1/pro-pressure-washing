@@ -35,6 +35,10 @@ export const faqs: Faq[] = [
     a: "Exterior house washing for vinyl siding is available, and the cleaning process is safe for both paint and landscaping when done correctly. Using the right amount of water pressure and professional cleaning solutions, vinyl siding is cleaned without peeling paint or harming nearby plants and shrubs. Extra precautions, like covering sensitive areas and rinsing plants before and after cleaning, help protect the landscaping during service. This approach gets rid of tough stains, dirt, and algae without causing damage to your home or yard.",
   },
   {
+    q: "Do you offer interior painting as well as pressure washing?",
+    a: "Yes. Along with exterior cleaning, we now offer interior painting for homes across Worcester County — walls, ceilings, trim, doors and closets, from a single room to a whole house. Prep is done properly (patching, sanding, caulking and priming), lines are cut in by hand, and furniture and floors are protected and the room is cleaned up when we're done. Many customers book painting alongside a house wash so the inside and outside get taken care of in one go. Call or use the quote form for a free estimate.",
+  },
+  {
     q: "Do you offer driveway pressure washing for oil stains and other tough marks on concrete?",
     a: "Driveway pressure washing is available and works well for removing oil stains, grease, and other tough marks on concrete. Using professional equipment and special cleaners, high-pressure water can lift and wash away most tough spots, refreshing the surface and improving curb appeal. It's a reliable way to handle dirt, tire marks, oil leaks, and other stubborn stains common on driveways. If a stain is very old or deeply set, it might not disappear completely, but you'll almost always see a big improvement.",
   },

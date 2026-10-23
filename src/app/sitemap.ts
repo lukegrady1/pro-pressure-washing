@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { business } from "@/data/business";
 import { allServices } from "@/data/services";
+import { serviceTownPages } from "@/data/serviceTowns";
 import { towns } from "@/data/towns";
 
 export const dynamic = "force-static";
@@ -20,9 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms-of-service/",
   ];
   const servicePaths = allServices.map((s) => `/${s.slug}/`);
+  const serviceTownPaths = serviceTownPages.map((p) => `/${p.slug}/`);
   const townPaths = towns.map((t) => `/${t.slug}/`);
 
-  return [...staticPaths, ...servicePaths, ...townPaths].map((path) => ({
+  return [...staticPaths, ...servicePaths, ...serviceTownPaths, ...townPaths].map((path) => ({
     url: `${base}${path}`,
     changeFrequency: "monthly",
     priority: path === "/" ? 1 : 0.7,

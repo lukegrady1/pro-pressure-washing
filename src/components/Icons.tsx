@@ -92,6 +92,14 @@ export const ArrowRightIcon = (p: IconProps) => (
   </svg>
 );
 
+export const PaintRollerIcon = (p: IconProps) => (
+  <svg {...base} {...p}>
+    <rect x="3" y="3" width="14" height="6" rx="1.5" />
+    <path d="M17 6h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-7a1 1 0 0 0-1 1v1" />
+    <rect x="9" y="15" width="4" height="6" rx="1" />
+  </svg>
+);
+
 export const iconMap = {
   star: StarIcon,
   badge: BadgeIcon,
