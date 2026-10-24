@@ -4,8 +4,8 @@ import { useSyncExternalStore } from "react";
 import Script from "next/script";
 import { business } from "@/data/business";
 
-// The quote/contact form is a GoHighLevel embed, hosted on the agency's
-// white-label domain (api.gradydigital.com). The form fields, spam protection,
+// The quote/contact form is a GoHighLevel embed, served from the client's
+// branded domain (forms.clpropressurewashing.com). The form fields, spam protection,
 // notifications and lead delivery are all managed inside GoHighLevel — this
 // component only renders the iframe and loads GHL's form_embed.js, which
 // listens for the form's postMessage and auto-resizes the iframe to fit.
@@ -15,8 +15,8 @@ import { business } from "@/data/business";
 // configured data-height (877) so the form is visible immediately and never
 // collapses to zero if the resize script is slow or blocked.
 const FORM_ID = "4sStOnSBmTjPXxfugvPo";
-const FORM_SRC = `https://api.gradydigital.com/widget/form/${FORM_ID}`;
-const EMBED_SCRIPT = "https://api.gradydigital.com/js/form_embed.js";
+const FORM_SRC = `https://forms.clpropressurewashing.com/widget/form/${FORM_ID}`;
+const EMBED_SCRIPT = "https://forms.clpropressurewashing.com/js/form_embed.js";
 
 // Region gate. The business only serves Worcester County, MA, so the form is
 // shown only to browsers whose IANA timezone is New York (US Eastern). Every spam
