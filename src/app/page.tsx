@@ -10,17 +10,20 @@ import AboutSection from "@/components/AboutSection";
 import QuoteSection from "@/components/QuoteSection";
 import WhyChoose from "@/components/WhyChoose";
 import Testimonials from "@/components/Testimonials";
-import Accordion from "@/components/Accordion";
+import {
+  FaqWidget,
+  ImagesWidget,
+  LocalPostsWidget,
+} from "@/components/MerchyntWidgets";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import { LazyMap } from "@/components/LazyEmbed";
-import { faqs } from "@/data/faqs";
 import { featuredPairs } from "@/data/gallery";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "Pro Pressure Washing Service Holden Worcester Shrewsbury MA",
   description:
-    "Pro Pressure Washing: house washing, roof, gutter, deck & concrete cleaning in Holden, Worcester & Worcester County, MA. Free quote: (508) 736-0089.",
+    "Pro Pressure Washing: pressure washing service, gutter cleaning service, exterior house washing, driveway pressure washing in Holden, Worcester & Shrewsbury, MA.",
   path: "/",
 });
 
@@ -28,6 +31,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+
+      {/* Live Google reviews, just under the hero */}
+      <Testimonials />
 
       {/* Pro Services We Offer */}
       <Section>
@@ -61,6 +67,15 @@ export default function HomePage() {
 
       <AboutSection />
 
+      {/* Google Business Profile photos (Merchynt widget) */}
+      <Section>
+        <SectionHeading
+          title="Photos From Our Jobs"
+          intro="Recent photos from our Google Business Profile — pressure washing, house washing and gutter cleaning across Worcester County, MA."
+        />
+        <ImagesWidget />
+      </Section>
+
       <QuoteSection />
 
       <Section className="bg-neutral-50">
@@ -75,26 +90,6 @@ export default function HomePage() {
         ]}
       />
 
-      <Testimonials />
-
-      {/* FAQs — teaser for /faq/, which carries the FAQPage schema. Deliberately
-          no schema here: these 5 are a subset of the 10 on /faq/, and Google
-          disallows the same Q&A being marked up on more than one URL. */}
-      <Section className="bg-neutral-50">
-        <SectionHeading
-          title="Frequently Asked Questions"
-          intro="Common questions about our pressure washing, gutter cleaning, exterior washing and interior painting services in Holden, Worcester & Shrewsbury, MA."
-        />
-        <div className="mx-auto max-w-3xl">
-          <Accordion items={faqs.slice(0, 5)} />
-        </div>
-        <div className="mt-6 text-center sm:mt-8">
-          <Link href="/faq/" className="btn">
-            View All FAQs
-          </Link>
-        </div>
-      </Section>
-
       {/* Map + closing */}
       <Section>
         <SectionHeading
@@ -102,6 +97,26 @@ export default function HomePage() {
           intro="Give us a call if you have a project in mind. We would love to get your property in shape for summer!"
         />
         <LazyMap query="Pro Pressure Washing" embedSrc={business.mapEmbedSrc} />
+      </Section>
+
+      {/* FAQs from the Google Business Profile (Merchynt widget). /faq/ carries
+          the site's own FAQs and the FAQPage schema. */}
+      <Section className="bg-neutral-50">
+        <FaqWidget />
+        <div className="mt-6 text-center sm:mt-8">
+          <Link href="/faq/" className="btn">
+            View All FAQs
+          </Link>
+        </div>
+      </Section>
+
+      {/* Recent Google posts (Merchynt widget) — last thing above the footer */}
+      <Section>
+        <SectionHeading
+          title="Latest Updates"
+          intro="Our most recent posts on Google."
+        />
+        <LocalPostsWidget />
       </Section>
     </>
   );

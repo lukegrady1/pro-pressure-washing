@@ -154,6 +154,9 @@ export default function ServiceTownTemplate({ page }: { page: ServiceTownPage })
         </div>
       </Section>
 
+      {/* Live Google reviews, in the top half of the page */}
+      <Testimonials />
+
       {/* Fast, free quotes — we don't publish prices, we route to a quote */}
       <Section className="bg-neutral-50">
         <SectionHeading
@@ -218,7 +221,6 @@ export default function ServiceTownTemplate({ page }: { page: ServiceTownPage })
       />
 
       <QuoteSection />
-      <Testimonials />
     </>
   );
 }
