@@ -99,6 +99,15 @@ export default function HomePage() {
         <LazyMap query="Pro Pressure Washing" embedSrc={business.mapEmbedSrc} />
       </Section>
 
+      {/* Recent Google posts (Merchynt widget) */}
+      <Section>
+        <SectionHeading
+          title="Latest Updates"
+          intro="Our most recent posts on Google."
+        />
+        <LocalPostsWidget />
+      </Section>
+
       {/* FAQs from the Google Business Profile (Merchynt widget). /faq/ carries
           the site's own FAQs and the FAQPage schema. */}
       <Section className="bg-neutral-50">
@@ -108,15 +117,6 @@ export default function HomePage() {
             View All FAQs
           </Link>
         </div>
-      </Section>
-
-      {/* Recent Google posts (Merchynt widget) — last thing above the footer */}
-      <Section>
-        <SectionHeading
-          title="Latest Updates"
-          intro="Our most recent posts on Google."
-        />
-        <LocalPostsWidget />
       </Section>
     </>
   );

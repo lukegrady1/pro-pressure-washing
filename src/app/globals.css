@@ -184,3 +184,38 @@
       0 4px 10px rgba(17, 17, 17, 0.25);
   }
 }
+
+/* Merchynt widget frames (see MerchyntWidgets.tsx). Heights are what the
+   widget's own layout renders at each frame width, measured; `cqw` is 1% of
+   the frame's width. */
+.merchynt-photos,
+.merchynt-posts {
+  container-type: inline-size;
+}
+.merchynt-photos iframe,
+.merchynt-posts iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+}
+/* Photos: below 800px the grid is a fixed-height box, so trim the empty space
+   under it. Wider, the grid is square and scrolls inside the 480px frame. */
+@container (max-width: 799px) {
+  .merchynt-photos iframe {
+    height: 460px;
+  }
+}
+@container (max-width: 499px) {
+  .merchynt-photos iframe {
+    height: 362px;
+  }
+}
+/* Posts: at 600px and under the cards stack vertically (image height scales
+   with width), so give the frame the full stack's height instead of a short
+   scroll box. */
+@container (max-width: 600px) {
+  .merchynt-posts iframe {
+    height: calc(225cqw + 624px);
+  }
+}
