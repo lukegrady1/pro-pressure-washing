@@ -3,8 +3,11 @@ export default function JsonLd({ data }: { data: object }) {
   return (
     <script
       type="application/ld+json"
-      // Data is our own trusted, static content.
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      // Our own static content; `<` is escaped (per the Next.js JSON-LD guide)
+      // so text such as review bodies can never close the script tag.
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }
