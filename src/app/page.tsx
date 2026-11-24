@@ -10,14 +10,13 @@ import AboutSection from "@/components/AboutSection";
 import QuoteSection from "@/components/QuoteSection";
 import WhyChoose from "@/components/WhyChoose";
 import Testimonials from "@/components/Testimonials";
-import {
-  FaqWidget,
-  ImagesWidget,
-  LocalPostsWidget,
-} from "@/components/MerchyntWidgets";
+import Accordion from "@/components/Accordion";
+import { ImagesWidget, LocalPostsWidget } from "@/components/MerchyntWidgets";
 import BeforeAfterShowcase from "@/components/BeforeAfterShowcase";
 import { LazyMap } from "@/components/LazyEmbed";
+import { faqs } from "@/data/faqs";
 import { featuredPairs } from "@/data/gallery";
+import { getMerchyntFaqs } from "@/lib/merchyntFaqs";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -27,7 +26,12 @@ export const metadata: Metadata = pageMeta({
   path: "/",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  // First 5 Q&As from the Google Business Profile (via Merchynt); the site's own
+  // FAQs if that can't be fetched at build time.
+  const googleFaqs = await getMerchyntFaqs();
+  const homeFaqs = (googleFaqs.length >= 5 ? googleFaqs : faqs).slice(0, 5);
+
   return (
     <>
       <Hero />
@@ -108,13 +112,20 @@ export default function HomePage() {
         <LocalPostsWidget />
       </Section>
 
-      {/* FAQs from the Google Business Profile (Merchynt widget). /faq/ carries
-          the site's own FAQs and the FAQPage schema. */}
+      {/* FAQ teaser: 5 Q&As from the Google Business Profile. "View More" goes
+          to /faq/, which has the full Merchynt widget. No FAQPage schema here —
+          /faq/ carries it for the site's own FAQs. */}
       <Section className="bg-neutral-50">
-        <FaqWidget />
+        <SectionHeading
+          title="Frequently Asked Questions"
+          intro="Common questions about our pressure washing, gutter cleaning, exterior washing and interior painting services in Holden, Worcester & Shrewsbury, MA."
+        />
+        <div className="mx-auto max-w-3xl">
+          <Accordion items={homeFaqs} />
+        </div>
         <div className="mt-6 text-center sm:mt-8">
           <Link href="/faq/" className="btn">
-            View All FAQs
+            View More
           </Link>
         </div>
       </Section>
